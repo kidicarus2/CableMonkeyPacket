@@ -1,0 +1,35 @@
+baseURL = 'https://cablemonkey.example.com/'
+languageCode = 'en-us'
+title = 'Cable Monkey Packet'
+theme = []
+
+# Admin settings for annotation management
+[params]
+  # Set admin password for deleting annotations (leave empty to disable)
+  adminPassword = "penguins"
+  # Password hint shown in admin login prompt
+  adminHint = "Contact admin for password"
+
+# Default settings
+defaultContentLanguage = 'en'
+publishDir = 'public'
+canonifyURLs = false
+relativeURLs = true
+
+# Enable JSON feed for potential API use
+disableKinds = ['RSS', 'sitemap', 'taxonomy', 'term']
+
+# Markdown configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Build options
+[build]
+  writeStats = true
+
+# Server options
+[server]
+  port = 1313
+  disableFastRender = true

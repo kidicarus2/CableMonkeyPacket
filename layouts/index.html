@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1>{{ .Site.Title }}</h1>
+  <p class="meta">Technical documentation and floor plans with collaborative annotations.</p>
+</div>
+
+<!-- Docs Section -->
+{{ $wikiPages := where .Site.RegularPages "Section" "wiki" }}
+{{ if $wikiPages }}
+<section style="margin-bottom: 3rem;">
+  <h2 style="margin-bottom: 1rem; color: #2c3e50;">📚 Docs</h2>
+  <div class="floorplan-grid">
+    {{ range $wikiPages }}
+    <div class="floorplan-card">
+      <a href="{{ .RelPermalink }}">
+        <div class="card-content">
+          <h3>{{ .Title }}</h3>
+          {{ with .Description }}
+          <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- Maps Section -->
+{{ $floorplans := where .Site.RegularPages "Section" "floorplans" }}
+{{ if $floorplans }}
+<section>
+  <h2 style="margin-bottom: 1rem; color: #2c3e50;">🗺️ Maps</h2>
+  <div class="floorplan-grid">
+    {{ range $floorplans }}
+    <div class="floorplan-card">
+      <a href="{{ .RelPermalink }}">
+        <div class="card-content">
+          <h3>{{ .Title }}</h3>
+          {{ with .Description }}
+          <p>{{ . }}</p>
+          {{ end }}
+          {{ with .Params.category }}
+          <span class="category">{{ . }}</span>
+          {{ end }}
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
