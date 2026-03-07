@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}
+  <p>{{ . }}</p>
+  {{ end }}
+</div>
+
+{{ if .Pages }}
+<div class="floorplan-grid">
+  {{ range .Pages }}
+  <div class="floorplan-card">
+    <a href="{{ .RelPermalink }}">
+      <div class="card-content">
+        <h3>{{ .Title }}</h3>
+        {{ with .Description }}
+        <p>{{ . }}</p>
+        {{ end }}
+        {{ with .Params.category }}
+        <span class="category">{{ . }}</span>
+        {{ end }}
+      </div>
+    </a>
+  </div>
+  {{ end }}
+</div>
+{{ else }}
+<p>No floor plans in this category yet.</p>
+{{ end }}
+{{ end }}
