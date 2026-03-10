@@ -1,199 +1,664 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Troubleshooting | Cable Monkey Packet</title><meta name=description content><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.7;color:#333;background:#f5f5f5}.site-header{background:#2c3e50;color:#fff;padding:.875rem 1rem;box-shadow:0 2px 4px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}.site-header h1{font-size:1.25rem;font-weight:600}.site-header a{color:#fff;text-decoration:none;display:flex;align-items:center;gap:.5rem}.site-header .back-link{font-size:.9rem;opacity:.9}.container{max-width:900px;margin:0 auto;padding:2rem 1rem}.page-header{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #e0e0e0}.page-header h1{font-size:2rem;color:#2c3e50;margin-bottom:.5rem}.page-header .meta{color:#666;font-size:.9rem}.content{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1)}.content h1{font-size:1.75rem;color:#2c3e50;margin:1.5rem 0 1rem}.content h2{font-size:1.5rem;color:#2c3e50;margin:1.5rem 0 .75rem}.content h3{font-size:1.25rem;color:#34495e;margin:1.25rem 0 .5rem}.content h4{font-size:1.1rem;color:#555;margin:1rem 0 .5rem}.content p{margin-bottom:1rem}.content ul,.content ol{margin-left:1.5rem;margin-bottom:1rem}.content li{margin-bottom:.5rem}.content code{background:#f4f4f4;padding:.2rem .4rem;border-radius:3px;font-size:.9em}.content pre{background:#2c3e50;color:#ecf0f1;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content pre code{background:0 0;padding:0;color:inherit}.content table{width:100%;border-collapse:collapse;margin:1rem 0}.content th,.content td{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content th{background:#f8f9fa;font-weight:600}.content a{color:#3498db}.content blockquote{border-left:4px solid #3498db;padding-left:1rem;margin:1rem 0;color:#666;font-style:italic}.content img{max-width:100%;height:auto;border-radius:4px;margin:1rem 0}.site-footer{background:#2c3e50;color:#fff;text-align:center;padding:2rem;margin-top:3rem;font-size:.85rem}.site-footer a{color:#5dade2}@media(max-width:600px){.container{padding:1rem}.content{padding:1.25rem}.page-header h1{font-size:1.5rem}.content h1{font-size:1.4rem}.content h2{font-size:1.25rem}}</style></head><body><header class=site-header><a href=/><span style=font-size:1.5rem>🐵</span>
-Cable Monkey Packet</a></header><main class=container><div class=page-header><h1>Troubleshooting</h1><p class=meta>Date: Mar 6, 2026</p></div><div class=content><h1 id=troubleshooting>Troubleshooting</h1><h2 id=overview>Overview</h2><p>This document provides troubleshooting procedures for common issues encountered with the SCaLE network infrastructure. Use this guide to diagnose and resolve problems quickly.</p><h2 id=general-troubleshooting-approach>General Troubleshooting Approach</h2><h3 id=diagnostic-steps>Diagnostic Steps</h3><ol><li><p><strong>Identify the Problem</strong></p><ul><li>What is the expected behavior?</li><li>What is the actual behavior?</li><li>When did it start?</li><li>What changed recently?</li></ul></li><li><p><strong>Gather Information</strong></p><ul><li>Check logs</li><li>Verify configurations</li><li>Test connectivity</li><li>Review recent changes</li></ul></li><li><p><strong>Isolate the Issue</strong></p><ul><li>Divide the network into segments</li><li>Test each component individually</li><li>Identify the failing component</li></ul></li><li><p><strong>Implement Fix</strong></p><ul><li>Apply the fix</li><li>Verify resolution</li><li>Document the issue</li></ul></li><li><p><strong>Prevent Recurrence</strong></p><ul><li>Update documentation</li><li>Add monitoring</li><li>Create test cases</li></ul></li></ol><h2 id=network-connectivity-issues>Network Connectivity Issues</h2><h3 id=no-network-connectivity>No Network Connectivity</h3><h4 id=symptoms>Symptoms</h4><ul><li>Cannot ping gateway</li><li>Cannot access internet</li><li>No DHCP lease</li></ul><h4 id=diagnostic-steps-1>Diagnostic Steps</h4><ol><li><p><strong>Check Physical Layer</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check interface status</span>
-</span></span><span style=display:flex><span>ip link show
-</span></span><span style=display:flex><span>ip addr show
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check cable</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Verify link lights on port</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check switch port</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Show port status on switch</span>
-</span></span></code></pre></div></li><li><p><strong>Check DHCP</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check DHCP lease</span>
-</span></span><span style=display:flex><span>cat /var/lib/dhcp/dhclient.leases
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check DHCP server</span>
-</span></span><span style=display:flex><span>systemctl status kea-dhcp4-server
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check DHCP logs</span>
-</span></span><span style=display:flex><span>journalctl -u kea-dhcp4-server -n <span style=color:#ae81ff>50</span>
-</span></span></code></pre></div></li><li><p><strong>Check Routing</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check routes</span>
-</span></span><span style=display:flex><span>ip route show
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check default gateway</span>
-</span></span><span style=display:flex><span>ip route default
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Ping gateway</span>
-</span></span><span style=display:flex><span>ping -c <span style=color:#ae81ff>4</span> 10.20.0.1
-</span></span></code></pre></div></li></ol><h4 id=common-causes>Common Causes</h4><ul><li>Cable disconnected</li><li>Switch port disabled</li><li>DHCP server down</li><li>IP conflict</li><li>VLAN misconfiguration</li></ul><h3 id=intermittent-connectivity>Intermittent Connectivity</h3><h4 id=symptoms-1>Symptoms</h4><ul><li>Connectivity drops periodically</li><li>High latency</li><li>Packet loss</li></ul><h4 id=diagnostic-steps-2>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check for packet loss</span>
-</span></span><span style=display:flex><span>ping -c <span style=color:#ae81ff>100</span> &lt;gateway&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check interface errors</span>
-</span></span><span style=display:flex><span>ip -s link show eth0
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check switch port errors</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Show interface statistics on switch</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check for congestion</span>
-</span></span><span style=display:flex><span>iftop
-</span></span><span style=display:flex><span>nethogs
-</span></span></code></pre></div><h4 id=common-causes-1>Common Causes</h4><ul><li>Cable degradation</li><li>Switch port issues</li><li>Network congestion</li><li>Power saving features</li></ul><h2 id=switch-issues>Switch Issues</h2><h3 id=cannot-connect-to-switch>Cannot Connect to Switch</h3><h4 id=symptoms-2>Symptoms</h4><ul><li>SSH connection fails</li><li>Cannot ping switch</li></ul><h4 id=diagnostic-steps-3>Diagnostic Steps</h4><ol><li><p><strong>Verify Network</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check if switch is reachable</span>
-</span></span><span style=display:flex><span>ping &lt;switch-ip&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check ARP</span>
-</span></span><span style=display:flex><span>arp -a | grep &lt;switch-ip&gt;
-</span></span></code></pre></div></li><li><p><strong>Check Physical</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Verify management VLAN</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check cable</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check switch status lights</span>
-</span></span></code></pre></div></li><li><p><strong>Serial Console</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Connect via serial</span>
-</span></span><span style=display:flex><span>screen /dev/ttyUSB0 <span style=color:#ae81ff>9600</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Or via network (if configured)</span>
-</span></span><span style=display:flex><span>telnet &lt;switch-ip&gt;
-</span></span></code></pre></div></li></ol><h4 id=solutions>Solutions</h4><ul><li>Reset switch to factory defaults</li><li>Use ZTP (Zero Touch Provisioning)</li><li>Load miniconfig via serial</li></ul><h3 id=switch-configuration-not-applying>Switch Configuration Not Applying</h3><h4 id=symptoms-3>Symptoms</h4><ul><li>Configuration changed but not active</li><li>Errors in configuration commit</li></ul><h4 id=diagnostic-steps-4>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Connect to switch</span>
-</span></span><span style=display:flex><span>ssh &lt;switch-name&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check configuration</span>
-</span></span><span style=display:flex><span>show configuration
-</span></span><span style=display:flex><span>show | compare
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check for errors</span>
-</span></span><span style=display:flex><span>show system messages
-</span></span></code></pre></div><h4 id=solutions-1>Solutions</h4><ul><li>Review syntax errors</li><li>Commit configuration</li><li>Rollback and fix</li></ul><h2 id=access-point-issues>Access Point Issues</h2><h3 id=ap-not-broadcasting-wifi>AP Not Broadcasting WiFi</h3><h4 id=diagnostic-steps-5>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># SSH to AP</span>
-</span></span><span style=display:flex><span>ssh root@10.x.x.x
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check WiFi status</span>
-</span></span><span style=display:flex><span>wifi status
-</span></span><span style=display:flex><span>iw dev
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check config</span>
-</span></span><span style=display:flex><span>cat /etc/config/wireless
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check logs</span>
-</span></span><span style=display:flex><span>logread | grep wifi
-</span></span><span style=display:flex><span>logread | grep wlan
-</span></span></code></pre></div><h4 id=solutions-2>Solutions</h4><ol><li><p><strong>Radio Disabled</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Enable radio</span>
-</span></span><span style=display:flex><span>wifi up
-</span></span></code></pre></div></li><li><p><strong>Configuration Error</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Regenerate config</span>
-</span></span><span style=display:flex><span>wifi config
-</span></span><span style=display:flex><span>wifi up
-</span></span></code></pre></div></li><li><p><strong>Driver Issue</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check loaded modules</span>
-</span></span><span style=display:flex><span>lsmod
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Reload driver</span>
-</span></span><span style=display:flex><span>rmmod ath10k_pci
-</span></span><span style=display:flex><span>modprobe ath10k_pci
-</span></span></code></pre></div></li></ol><h3 id=clients-cannot-connect>Clients Cannot Connect</h3><h4 id=diagnostic-steps-6>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># On AP, check associations</span>
-</span></span><span style=display:flex><span>iw dev wlan0 station dump
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check for auth failures</span>
-</span></span><span style=display:flex><span>logread | grep auth
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check signal strength</span>
-</span></span><span style=display:flex><span>iw dev wlan0 station get &lt;client-mac&gt;
-</span></span></code></pre></div><h4 id=common-causes-2>Common Causes</h4><ul><li>Wrong password</li><li>Too many clients</li><li>Signal too weak</li><li>Channel congestion</li><li>Client driver issue</li></ul><h3 id=ap-not-getting-ip>AP Not Getting IP</h3><h4 id=diagnostic-steps-7>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check AP network config</span>
-</span></span><span style=display:flex><span>ip addr show
-</span></span><span style=display:flex><span>ip route show
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check DHCP</span>
-</span></span><span style=display:flex><span>logread | grep dhcp
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check AP can reach DHCP server</span>
-</span></span><span style=display:flex><span>ping &lt;dhcp-server&gt;
-</span></span></code></pre></div><h2 id=server-issues>Server Issues</h2><h3 id=service-not-starting>Service Not Starting</h3><h4 id=diagnostic-steps-8>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check service status</span>
-</span></span><span style=display:flex><span>systemctl status &lt;service&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check logs</span>
-</span></span><span style=display:flex><span>journalctl -u &lt;service&gt; -n <span style=color:#ae81ff>100</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check configuration</span>
-</span></span><span style=display:flex><span>&lt;service&gt; -t
-</span></span></code></pre></div><h4 id=common-solutions>Common Solutions</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Restart service</span>
-</span></span><span style=display:flex><span>systemctl restart &lt;service&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Enable service</span>
-</span></span><span style=display:flex><span>systemctl enable &lt;service&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check dependencies</span>
-</span></span><span style=display:flex><span>systemctl list-dependencies &lt;service&gt;
-</span></span></code></pre></div><h3 id=high-resource-usage>High Resource Usage</h3><h4 id=diagnostic-steps-9>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check CPU</span>
-</span></span><span style=display:flex><span>top
-</span></span><span style=display:flex><span>htop
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check memory</span>
-</span></span><span style=display:flex><span>free -h
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check disk</span>
-</span></span><span style=display:flex><span>df -h
-</span></span><span style=display:flex><span>iostat -x <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check network</span>
-</span></span><span style=display:flex><span>iftop
-</span></span><span style=display:flex><span>nethogs
-</span></span></code></pre></div><h2 id=dns-issues>DNS Issues</h2><h3 id=dns-resolution-failing>DNS Resolution Failing</h3><h4 id=diagnostic-steps-10>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Test DNS directly</span>
-</span></span><span style=display:flex><span>nslookup &lt;hostname&gt; &lt;dns-server&gt;
-</span></span><span style=display:flex><span>dig @&lt;dns-server&gt; &lt;hostname&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check DNS service</span>
-</span></span><span style=display:flex><span>systemctl status bind
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check logs</span>
-</span></span><span style=display:flex><span>journalctl -u bind -n <span style=color:#ae81ff>50</span>
-</span></span></code></pre></div><h4 id=solutions-3>Solutions</h4><ul><li>Restart DNS service</li><li>Check zone files</li><li>Verify forwarders</li><li>Check firewall rules</li></ul><h2 id=monitoring-issues>Monitoring Issues</h2><h3 id=prometheus-metrics-missing>Prometheus Metrics Missing</h3><h4 id=diagnostic-steps-11>Diagnostic Steps</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check Prometheus</span>
-</span></span><span style=display:flex><span>curl http://localhost:9090/api/v1/query?query<span style=color:#f92672>=</span>up
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check exporter</span>
-</span></span><span style=display:flex><span>curl http://localhost:9100/metrics
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check service</span>
-</span></span><span style=display:flex><span>systemctl status prometheus
-</span></span></code></pre></div><h3 id=apinger-alerts>apinger Alerts</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Check apinger logs</span>
-</span></span><span style=display:flex><span>journalctl -u apinger
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Check apinger config</span>
-</span></span><span style=display:flex><span>cat /etc/apinger.conf
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Manual test</span>
-</span></span><span style=display:flex><span>ping -c <span style=color:#ae81ff>5</span> &lt;target&gt;
-</span></span></code></pre></div><h2 id=emergency-procedures>Emergency Procedures</h2><h3 id=complete-network-outage>Complete Network Outage</h3><ol><li><p><strong>Assess</strong></p><ul><li>Identify scope of outage</li><li>Determine affected systems</li><li>Check power status</li></ul></li><li><p><strong>Communication</strong></p><ul><li>Notify team</li><li>Update status page if available</li></ul></li><li><p><strong>Recovery</strong></p><ul><li>Start core services first</li><li>Work outward</li><li>Verify each service</li></ul></li><li><p><strong>Documentation</strong></p><ul><li>Document incident</li><li>Post-mortem analysis</li></ul></li></ol><h3 id=equipment-replacement>Equipment Replacement</h3><ol><li><p><strong>Document</strong></p><ul><li>Photograph current setup</li><li>Note cable connections</li></ul></li><li><p><strong>Replace</strong></p><ul><li>Swap hardware</li><li>Connect cables</li></ul></li><li><p><strong>Configure</strong></p><ul><li>Apply configuration</li><li>Verify functionality</li></ul></li><li><p><strong>Update</strong></p><ul><li>Update inventory</li><li>Update documentation</li></ul></li></ol><h2 id=useful-commands>Useful Commands</h2><h3 id=network-testing>Network Testing</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Connectivity</span>
-</span></span><span style=display:flex><span>ping -c <span style=color:#ae81ff>4</span> &lt;host&gt;
-</span></span><span style=display:flex><span>traceroute &lt;host&gt;
-</span></span><span style=display:flex><span>mtr &lt;host&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># DNS</span>
-</span></span><span style=display:flex><span>nslookup &lt;host&gt;
-</span></span><span style=display:flex><span>dig &lt;host&gt;
-</span></span><span style=display:flex><span>host &lt;host&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Port testing</span>
-</span></span><span style=display:flex><span>nc -zv &lt;host&gt; &lt;port&gt;
-</span></span><span style=display:flex><span>telnet &lt;host&gt; &lt;port&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Bandwidth</span>
-</span></span><span style=display:flex><span>iperf3 -s  <span style=color:#75715e># server</span>
-</span></span><span style=display:flex><span>iperf3 -c &lt;server&gt;  <span style=color:#75715e># client</span>
-</span></span></code></pre></div><h3 id=log-analysis>Log Analysis</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># System logs</span>
-</span></span><span style=display:flex><span>journalctl -xe
-</span></span><span style=display:flex><span>journalctl -u &lt;service&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Kernel logs</span>
-</span></span><span style=display:flex><span>dmesg
-</span></span><span style=display:flex><span>dmesg | tail -50
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Application logs</span>
-</span></span><span style=display:flex><span>tail -f /var/log/&lt;logfile&gt;
-</span></span><span style=display:flex><span>grep -i error /var/log/&lt;logfile&gt;
-</span></span></code></pre></div><h3 id=configuration>Configuration</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Network</span>
-</span></span><span style=display:flex><span>ip addr
-</span></span><span style=display:flex><span>ip route
-</span></span><span style=display:flex><span>ip link
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Wireless</span>
-</span></span><span style=display:flex><span>iw dev
-</span></span><span style=display:flex><span>iwlist scanning
-</span></span><span style=display:flex><span>iw dev wlan0 station dump
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Connections</span>
-</span></span><span style=display:flex><span>ss -tulpn
-</span></span><span style=display:flex><span>netstat -tulpn
-</span></span></code></pre></div><h2 id=getting-help>Getting Help</h2><p>If you cannot resolve the issue:</p><ol><li>Check documentation</li><li>Search existing issues</li><li>Ask on IRC (#scale-tech on libera.chat)</li><li>Post to mailing list</li><li>Create GitHub issue</li></ol><h2 id=issue-reporting>Issue Reporting</h2><p>When reporting issues, include:</p><ul><li>Date and time</li><li>Affected systems</li><li>Symptoms</li><li>Steps to reproduce</li><li>What you tried</li><li>Error messages</li><li>Logs (relevant portions)</li></ul></div></main><footer class=site-footer><p>🐵 Cable Monkey Packet</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Troubleshooting | Cable Monkey Packet</title>
+  
+  <meta name="description" content="">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f5f5;
+    }
+    
+    .site-header {
+      background: #2c3e50;
+      color: white;
+      padding: 0.875rem 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .site-header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .site-header a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .site-header .back-link {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .page-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .page-header h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    
+    .page-header .meta {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    .content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .content h1 { font-size: 1.75rem; color: #2c3e50; margin: 1.5rem 0 1rem; }
+    .content h2 { font-size: 1.5rem; color: #2c3e50; margin: 1.5rem 0 0.75rem; }
+    .content h3 { font-size: 1.25rem; color: #34495e; margin: 1.25rem 0 0.5rem; }
+    .content h4 { font-size: 1.1rem; color: #555; margin: 1rem 0 0.5rem; }
+    
+    .content p { margin-bottom: 1rem; }
+    
+    .content ul, .content ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .content li { margin-bottom: 0.5rem; }
+    
+    .content code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    
+    .content pre {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    
+    .content pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+    }
+    
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    
+    .content th, .content td {
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    
+    .content th {
+      background: #f8f9fa;
+      font-weight: 600;
+    }
+    
+    .content a {
+      color: #3498db;
+    }
+    
+    .content blockquote {
+      border-left: 4px solid #3498db;
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: #666;
+      font-style: italic;
+    }
+    
+    .content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    
+    .site-footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+    }
+    
+    .site-footer a {
+      color: #5dade2;
+    }
+    
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      .content { padding: 1.25rem; }
+      .page-header h1 { font-size: 1.5rem; }
+      .content h1 { font-size: 1.4rem; }
+      .content h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/">
+      <span style="font-size: 1.5rem;">🐵</span>
+      Cable Monkey Packet
+    </a>
+  </header>
+  
+  <main class="container">
+    <div class="page-header">
+      <h1>Troubleshooting</h1>
+      
+      <p class="meta">Date: Mar 6, 2026</p>
+      
+    </div>
+    
+    <div class="content">
+      <h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="overview">Overview</h2>
+<p>This document provides troubleshooting procedures for common issues encountered with the SCaLE network infrastructure. Use this guide to diagnose and resolve problems quickly.</p>
+<h2 id="general-troubleshooting-approach">General Troubleshooting Approach</h2>
+<h3 id="diagnostic-steps">Diagnostic Steps</h3>
+<ol>
+<li>
+<p><strong>Identify the Problem</strong></p>
+<ul>
+<li>What is the expected behavior?</li>
+<li>What is the actual behavior?</li>
+<li>When did it start?</li>
+<li>What changed recently?</li>
+</ul>
+</li>
+<li>
+<p><strong>Gather Information</strong></p>
+<ul>
+<li>Check logs</li>
+<li>Verify configurations</li>
+<li>Test connectivity</li>
+<li>Review recent changes</li>
+</ul>
+</li>
+<li>
+<p><strong>Isolate the Issue</strong></p>
+<ul>
+<li>Divide the network into segments</li>
+<li>Test each component individually</li>
+<li>Identify the failing component</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement Fix</strong></p>
+<ul>
+<li>Apply the fix</li>
+<li>Verify resolution</li>
+<li>Document the issue</li>
+</ul>
+</li>
+<li>
+<p><strong>Prevent Recurrence</strong></p>
+<ul>
+<li>Update documentation</li>
+<li>Add monitoring</li>
+<li>Create test cases</li>
+</ul>
+</li>
+</ol>
+<h2 id="network-connectivity-issues">Network Connectivity Issues</h2>
+<h3 id="no-network-connectivity">No Network Connectivity</h3>
+<h4 id="symptoms">Symptoms</h4>
+<ul>
+<li>Cannot ping gateway</li>
+<li>Cannot access internet</li>
+<li>No DHCP lease</li>
+</ul>
+<h4 id="diagnostic-steps-1">Diagnostic Steps</h4>
+<ol>
+<li>
+<p><strong>Check Physical Layer</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check interface status</span>
+</span></span><span style="display:flex;"><span>ip link show
+</span></span><span style="display:flex;"><span>ip addr show
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check cable</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify link lights on port</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check switch port</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Show port status on switch</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Check DHCP</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check DHCP lease</span>
+</span></span><span style="display:flex;"><span>cat /var/lib/dhcp/dhclient.leases
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check DHCP server</span>
+</span></span><span style="display:flex;"><span>systemctl status kea-dhcp4-server
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check DHCP logs</span>
+</span></span><span style="display:flex;"><span>journalctl -u kea-dhcp4-server -n <span style="color:#ae81ff">50</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Check Routing</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check routes</span>
+</span></span><span style="display:flex;"><span>ip route show
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check default gateway</span>
+</span></span><span style="display:flex;"><span>ip route default
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ping gateway</span>
+</span></span><span style="display:flex;"><span>ping -c <span style="color:#ae81ff">4</span> 10.20.0.1
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="common-causes">Common Causes</h4>
+<ul>
+<li>Cable disconnected</li>
+<li>Switch port disabled</li>
+<li>DHCP server down</li>
+<li>IP conflict</li>
+<li>VLAN misconfiguration</li>
+</ul>
+<h3 id="intermittent-connectivity">Intermittent Connectivity</h3>
+<h4 id="symptoms-1">Symptoms</h4>
+<ul>
+<li>Connectivity drops periodically</li>
+<li>High latency</li>
+<li>Packet loss</li>
+</ul>
+<h4 id="diagnostic-steps-2">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check for packet loss</span>
+</span></span><span style="display:flex;"><span>ping -c <span style="color:#ae81ff">100</span> &lt;gateway&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check interface errors</span>
+</span></span><span style="display:flex;"><span>ip -s link show eth0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check switch port errors</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Show interface statistics on switch</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check for congestion</span>
+</span></span><span style="display:flex;"><span>iftop
+</span></span><span style="display:flex;"><span>nethogs
+</span></span></code></pre></div><h4 id="common-causes-1">Common Causes</h4>
+<ul>
+<li>Cable degradation</li>
+<li>Switch port issues</li>
+<li>Network congestion</li>
+<li>Power saving features</li>
+</ul>
+<h2 id="switch-issues">Switch Issues</h2>
+<h3 id="cannot-connect-to-switch">Cannot Connect to Switch</h3>
+<h4 id="symptoms-2">Symptoms</h4>
+<ul>
+<li>SSH connection fails</li>
+<li>Cannot ping switch</li>
+</ul>
+<h4 id="diagnostic-steps-3">Diagnostic Steps</h4>
+<ol>
+<li>
+<p><strong>Verify Network</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check if switch is reachable</span>
+</span></span><span style="display:flex;"><span>ping &lt;switch-ip&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check ARP</span>
+</span></span><span style="display:flex;"><span>arp -a | grep &lt;switch-ip&gt;
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Check Physical</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Verify management VLAN</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check cable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check switch status lights</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Serial Console</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Connect via serial</span>
+</span></span><span style="display:flex;"><span>screen /dev/ttyUSB0 <span style="color:#ae81ff">9600</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Or via network (if configured)</span>
+</span></span><span style="display:flex;"><span>telnet &lt;switch-ip&gt;
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="solutions">Solutions</h4>
+<ul>
+<li>Reset switch to factory defaults</li>
+<li>Use ZTP (Zero Touch Provisioning)</li>
+<li>Load miniconfig via serial</li>
+</ul>
+<h3 id="switch-configuration-not-applying">Switch Configuration Not Applying</h3>
+<h4 id="symptoms-3">Symptoms</h4>
+<ul>
+<li>Configuration changed but not active</li>
+<li>Errors in configuration commit</li>
+</ul>
+<h4 id="diagnostic-steps-4">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Connect to switch</span>
+</span></span><span style="display:flex;"><span>ssh &lt;switch-name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check configuration</span>
+</span></span><span style="display:flex;"><span>show configuration
+</span></span><span style="display:flex;"><span>show | compare
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check for errors</span>
+</span></span><span style="display:flex;"><span>show system messages
+</span></span></code></pre></div><h4 id="solutions-1">Solutions</h4>
+<ul>
+<li>Review syntax errors</li>
+<li>Commit configuration</li>
+<li>Rollback and fix</li>
+</ul>
+<h2 id="access-point-issues">Access Point Issues</h2>
+<h3 id="ap-not-broadcasting-wifi">AP Not Broadcasting WiFi</h3>
+<h4 id="diagnostic-steps-5">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># SSH to AP</span>
+</span></span><span style="display:flex;"><span>ssh root@10.x.x.x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check WiFi status</span>
+</span></span><span style="display:flex;"><span>wifi status
+</span></span><span style="display:flex;"><span>iw dev
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check config</span>
+</span></span><span style="display:flex;"><span>cat /etc/config/wireless
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check logs</span>
+</span></span><span style="display:flex;"><span>logread | grep wifi
+</span></span><span style="display:flex;"><span>logread | grep wlan
+</span></span></code></pre></div><h4 id="solutions-2">Solutions</h4>
+<ol>
+<li>
+<p><strong>Radio Disabled</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Enable radio</span>
+</span></span><span style="display:flex;"><span>wifi up
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Configuration Error</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Regenerate config</span>
+</span></span><span style="display:flex;"><span>wifi config
+</span></span><span style="display:flex;"><span>wifi up
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Driver Issue</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check loaded modules</span>
+</span></span><span style="display:flex;"><span>lsmod
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Reload driver</span>
+</span></span><span style="display:flex;"><span>rmmod ath10k_pci
+</span></span><span style="display:flex;"><span>modprobe ath10k_pci
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="clients-cannot-connect">Clients Cannot Connect</h3>
+<h4 id="diagnostic-steps-6">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># On AP, check associations</span>
+</span></span><span style="display:flex;"><span>iw dev wlan0 station dump
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check for auth failures</span>
+</span></span><span style="display:flex;"><span>logread | grep auth
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check signal strength</span>
+</span></span><span style="display:flex;"><span>iw dev wlan0 station get &lt;client-mac&gt;
+</span></span></code></pre></div><h4 id="common-causes-2">Common Causes</h4>
+<ul>
+<li>Wrong password</li>
+<li>Too many clients</li>
+<li>Signal too weak</li>
+<li>Channel congestion</li>
+<li>Client driver issue</li>
+</ul>
+<h3 id="ap-not-getting-ip">AP Not Getting IP</h3>
+<h4 id="diagnostic-steps-7">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check AP network config</span>
+</span></span><span style="display:flex;"><span>ip addr show
+</span></span><span style="display:flex;"><span>ip route show
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check DHCP</span>
+</span></span><span style="display:flex;"><span>logread | grep dhcp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check AP can reach DHCP server</span>
+</span></span><span style="display:flex;"><span>ping &lt;dhcp-server&gt;
+</span></span></code></pre></div><h2 id="server-issues">Server Issues</h2>
+<h3 id="service-not-starting">Service Not Starting</h3>
+<h4 id="diagnostic-steps-8">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check service status</span>
+</span></span><span style="display:flex;"><span>systemctl status &lt;service&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check logs</span>
+</span></span><span style="display:flex;"><span>journalctl -u &lt;service&gt; -n <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check configuration</span>
+</span></span><span style="display:flex;"><span>&lt;service&gt; -t
+</span></span></code></pre></div><h4 id="common-solutions">Common Solutions</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Restart service</span>
+</span></span><span style="display:flex;"><span>systemctl restart &lt;service&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Enable service</span>
+</span></span><span style="display:flex;"><span>systemctl enable &lt;service&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check dependencies</span>
+</span></span><span style="display:flex;"><span>systemctl list-dependencies &lt;service&gt;
+</span></span></code></pre></div><h3 id="high-resource-usage">High Resource Usage</h3>
+<h4 id="diagnostic-steps-9">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check CPU</span>
+</span></span><span style="display:flex;"><span>top
+</span></span><span style="display:flex;"><span>htop
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check memory</span>
+</span></span><span style="display:flex;"><span>free -h
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check disk</span>
+</span></span><span style="display:flex;"><span>df -h
+</span></span><span style="display:flex;"><span>iostat -x <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check network</span>
+</span></span><span style="display:flex;"><span>iftop
+</span></span><span style="display:flex;"><span>nethogs
+</span></span></code></pre></div><h2 id="dns-issues">DNS Issues</h2>
+<h3 id="dns-resolution-failing">DNS Resolution Failing</h3>
+<h4 id="diagnostic-steps-10">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Test DNS directly</span>
+</span></span><span style="display:flex;"><span>nslookup &lt;hostname&gt; &lt;dns-server&gt;
+</span></span><span style="display:flex;"><span>dig @&lt;dns-server&gt; &lt;hostname&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check DNS service</span>
+</span></span><span style="display:flex;"><span>systemctl status bind
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check logs</span>
+</span></span><span style="display:flex;"><span>journalctl -u bind -n <span style="color:#ae81ff">50</span>
+</span></span></code></pre></div><h4 id="solutions-3">Solutions</h4>
+<ul>
+<li>Restart DNS service</li>
+<li>Check zone files</li>
+<li>Verify forwarders</li>
+<li>Check firewall rules</li>
+</ul>
+<h2 id="monitoring-issues">Monitoring Issues</h2>
+<h3 id="prometheus-metrics-missing">Prometheus Metrics Missing</h3>
+<h4 id="diagnostic-steps-11">Diagnostic Steps</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check Prometheus</span>
+</span></span><span style="display:flex;"><span>curl http://localhost:9090/api/v1/query?query<span style="color:#f92672">=</span>up
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check exporter</span>
+</span></span><span style="display:flex;"><span>curl http://localhost:9100/metrics
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check service</span>
+</span></span><span style="display:flex;"><span>systemctl status prometheus
+</span></span></code></pre></div><h3 id="apinger-alerts">apinger Alerts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check apinger logs</span>
+</span></span><span style="display:flex;"><span>journalctl -u apinger
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check apinger config</span>
+</span></span><span style="display:flex;"><span>cat /etc/apinger.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Manual test</span>
+</span></span><span style="display:flex;"><span>ping -c <span style="color:#ae81ff">5</span> &lt;target&gt;
+</span></span></code></pre></div><h2 id="emergency-procedures">Emergency Procedures</h2>
+<h3 id="complete-network-outage">Complete Network Outage</h3>
+<ol>
+<li>
+<p><strong>Assess</strong></p>
+<ul>
+<li>Identify scope of outage</li>
+<li>Determine affected systems</li>
+<li>Check power status</li>
+</ul>
+</li>
+<li>
+<p><strong>Communication</strong></p>
+<ul>
+<li>Notify team</li>
+<li>Update status page if available</li>
+</ul>
+</li>
+<li>
+<p><strong>Recovery</strong></p>
+<ul>
+<li>Start core services first</li>
+<li>Work outward</li>
+<li>Verify each service</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentation</strong></p>
+<ul>
+<li>Document incident</li>
+<li>Post-mortem analysis</li>
+</ul>
+</li>
+</ol>
+<h3 id="equipment-replacement">Equipment Replacement</h3>
+<ol>
+<li>
+<p><strong>Document</strong></p>
+<ul>
+<li>Photograph current setup</li>
+<li>Note cable connections</li>
+</ul>
+</li>
+<li>
+<p><strong>Replace</strong></p>
+<ul>
+<li>Swap hardware</li>
+<li>Connect cables</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure</strong></p>
+<ul>
+<li>Apply configuration</li>
+<li>Verify functionality</li>
+</ul>
+</li>
+<li>
+<p><strong>Update</strong></p>
+<ul>
+<li>Update inventory</li>
+<li>Update documentation</li>
+</ul>
+</li>
+</ol>
+<h2 id="useful-commands">Useful Commands</h2>
+<h3 id="network-testing">Network Testing</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Connectivity</span>
+</span></span><span style="display:flex;"><span>ping -c <span style="color:#ae81ff">4</span> &lt;host&gt;
+</span></span><span style="display:flex;"><span>traceroute &lt;host&gt;
+</span></span><span style="display:flex;"><span>mtr &lt;host&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># DNS</span>
+</span></span><span style="display:flex;"><span>nslookup &lt;host&gt;
+</span></span><span style="display:flex;"><span>dig &lt;host&gt;
+</span></span><span style="display:flex;"><span>host &lt;host&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Port testing</span>
+</span></span><span style="display:flex;"><span>nc -zv &lt;host&gt; &lt;port&gt;
+</span></span><span style="display:flex;"><span>telnet &lt;host&gt; &lt;port&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Bandwidth</span>
+</span></span><span style="display:flex;"><span>iperf3 -s  <span style="color:#75715e"># server</span>
+</span></span><span style="display:flex;"><span>iperf3 -c &lt;server&gt;  <span style="color:#75715e"># client</span>
+</span></span></code></pre></div><h3 id="log-analysis">Log Analysis</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># System logs</span>
+</span></span><span style="display:flex;"><span>journalctl -xe
+</span></span><span style="display:flex;"><span>journalctl -u &lt;service&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Kernel logs</span>
+</span></span><span style="display:flex;"><span>dmesg
+</span></span><span style="display:flex;"><span>dmesg | tail -50
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Application logs</span>
+</span></span><span style="display:flex;"><span>tail -f /var/log/&lt;logfile&gt;
+</span></span><span style="display:flex;"><span>grep -i error /var/log/&lt;logfile&gt;
+</span></span></code></pre></div><h3 id="configuration">Configuration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Network</span>
+</span></span><span style="display:flex;"><span>ip addr
+</span></span><span style="display:flex;"><span>ip route
+</span></span><span style="display:flex;"><span>ip link
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Wireless</span>
+</span></span><span style="display:flex;"><span>iw dev
+</span></span><span style="display:flex;"><span>iwlist scanning
+</span></span><span style="display:flex;"><span>iw dev wlan0 station dump
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Connections</span>
+</span></span><span style="display:flex;"><span>ss -tulpn
+</span></span><span style="display:flex;"><span>netstat -tulpn
+</span></span></code></pre></div><h2 id="getting-help">Getting Help</h2>
+<p>If you cannot resolve the issue:</p>
+<ol>
+<li>Check documentation</li>
+<li>Search existing issues</li>
+<li>Ask on IRC (#scale-tech on libera.chat)</li>
+<li>Post to mailing list</li>
+<li>Create GitHub issue</li>
+</ol>
+<h2 id="issue-reporting">Issue Reporting</h2>
+<p>When reporting issues, include:</p>
+<ul>
+<li>Date and time</li>
+<li>Affected systems</li>
+<li>Symptoms</li>
+<li>Steps to reproduce</li>
+<li>What you tried</li>
+<li>Error messages</li>
+<li>Logs (relevant portions)</li>
+</ul>
+
+    </div>
+  </main>
+  
+  <footer class="site-footer">
+    <p>🐵 Cable Monkey Packet</p>
+  </footer>
+</body>
+</html>
