@@ -1,10 +1,16 @@
-{ pkgs ? import <nixpkgs> {} }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
+    # repo management
+    git
+    gh
+
     # Node.js runtime
     nodejs_20
-    
+
     # Hugo for static site generation
     hugo
   ];
