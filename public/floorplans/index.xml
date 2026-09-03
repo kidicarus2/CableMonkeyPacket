@@ -1,46 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Floorplans on Cable Monkey Packet</title><link>https://cablemonkey.example.com/floorplans/</link><description>Recent content in Floorplans on Cable Monkey Packet</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 06 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://cablemonkey.example.com/floorplans/index.xml" rel="self" type="application/rss+xml"/><item><title>Ballrooms</title><link>https://cablemonkey.example.com/floorplans/ballrooms/</link><pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate><guid>https://cablemonkey.example.com/floorplans/ballrooms/</guid><description>&lt;h3 id="the-pdf-viewer-above-allows-you-to"&gt;The PDF viewer above allows you to:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigate between pages using the Previous/Next buttons&lt;/li&gt;
-&lt;li&gt;Zoom in and out using the +/- buttons&lt;/li&gt;
-&lt;li&gt;Enter a specific page number directly&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Add annotations using Hypothesis&lt;/strong&gt; - click anywhere on the PDF to add
-comments, highlight text, or make notes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="heres-how-to-use-it"&gt;Here&amp;rsquo;s how to use it:&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Add annotations&lt;/strong&gt;: Click anywhere on the document to add a comment&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reply to annotations&lt;/strong&gt;: Respond to existing annotations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Filter annotations&lt;/strong&gt;: Use the sidebar to filter and search annotations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Toggle sidebar&lt;/strong&gt;: Click &amp;ldquo;Annotations&amp;rdquo; button to toggle sidebar&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;The annotations can be accessed by anyone with the link to this document.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Lower Conference</title><link>https://cablemonkey.example.com/floorplans/lower-conf/</link><pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate><guid>https://cablemonkey.example.com/floorplans/lower-conf/</guid><description>&lt;h3 id="the-pdf-viewer-above-allows-you-to"&gt;The PDF viewer above allows you to:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigate between pages using the Previous/Next buttons&lt;/li&gt;
-&lt;li&gt;Zoom in and out using the +/- buttons&lt;/li&gt;
-&lt;li&gt;Enter a specific page number directly&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Add annotations using Hypothesis&lt;/strong&gt; - click anywhere on the PDF to add
-comments, highlight text, or make notes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="heres-how-to-use-it"&gt;Here&amp;rsquo;s how to use it:&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Add annotations&lt;/strong&gt;: Click anywhere on the document to add a comment&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reply to annotations&lt;/strong&gt;: Respond to existing annotations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Filter annotations&lt;/strong&gt;: Use the sidebar to filter and search annotations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Toggle sidebar&lt;/strong&gt;: Click &amp;ldquo;Annotations&amp;rdquo; button to toggle sidebar&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;The annotations can be accessed by anyone with the link to this document.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Upper Conference</title><link>https://cablemonkey.example.com/floorplans/upper-conf/</link><pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate><guid>https://cablemonkey.example.com/floorplans/upper-conf/</guid><description>&lt;h3 id="the-pdf-viewer-above-allows-you-to"&gt;The PDF viewer above allows you to:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigate between pages using the Previous/Next buttons&lt;/li&gt;
-&lt;li&gt;Zoom in and out using the +/- buttons&lt;/li&gt;
-&lt;li&gt;Enter a specific page number directly&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Add annotations using Hypothesis&lt;/strong&gt; - click anywhere on the PDF to add
-comments, highlight text, or make notes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="heres-how-to-use-it"&gt;Here&amp;rsquo;s how to use it:&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Add annotations&lt;/strong&gt;: Click anywhere on the document to add a comment&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reply to annotations&lt;/strong&gt;: Respond to existing annotations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Filter annotations&lt;/strong&gt;: Use the sidebar to filter and search annotations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Toggle sidebar&lt;/strong&gt;: Click &amp;ldquo;Annotations&amp;rdquo; button to toggle sidebar&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;The annotations can be accessed by anyone with the link to this document.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Floorplans on Cable Monkey Packet</title>
+    <link>https://cablemonkey.example.com/floorplans/</link>
+    <description>Recent content in Floorplans on Cable Monkey Packet</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://cablemonkey.example.com/floorplans/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ballrooms</title>
+      <link>https://cablemonkey.example.com/floorplans/ballrooms/</link>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://cablemonkey.example.com/floorplans/ballrooms/</guid>
+      <description>&lt;h3 id=&#34;the-pdf-viewer-above-allows-you-to&#34;&gt;The PDF viewer above allows you to:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Navigate between pages using the Previous/Next buttons&lt;/li&gt;&#xA;&lt;li&gt;Zoom in and out using the +/- buttons&lt;/li&gt;&#xA;&lt;li&gt;Enter a specific page number directly&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Add annotations using Hypothesis&lt;/strong&gt; - click anywhere on the PDF to add&#xA;comments, highlight text, or make notes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;heres-how-to-use-it&#34;&gt;Here&amp;rsquo;s how to use it:&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Add annotations&lt;/strong&gt;: Click anywhere on the document to add a comment&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reply to annotations&lt;/strong&gt;: Respond to existing annotations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Filter annotations&lt;/strong&gt;: Use the sidebar to filter and search annotations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Toggle sidebar&lt;/strong&gt;: Click &amp;ldquo;Annotations&amp;rdquo; button to toggle sidebar&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;em&gt;The annotations can be accessed by anyone with the link to this document.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lower Conference</title>
+      <link>https://cablemonkey.example.com/floorplans/lower-conf/</link>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://cablemonkey.example.com/floorplans/lower-conf/</guid>
+      <description>&lt;h3 id=&#34;the-pdf-viewer-above-allows-you-to&#34;&gt;The PDF viewer above allows you to:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Navigate between pages using the Previous/Next buttons&lt;/li&gt;&#xA;&lt;li&gt;Zoom in and out using the +/- buttons&lt;/li&gt;&#xA;&lt;li&gt;Enter a specific page number directly&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Add annotations using Hypothesis&lt;/strong&gt; - click anywhere on the PDF to add&#xA;comments, highlight text, or make notes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;heres-how-to-use-it&#34;&gt;Here&amp;rsquo;s how to use it:&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Add annotations&lt;/strong&gt;: Click anywhere on the document to add a comment&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reply to annotations&lt;/strong&gt;: Respond to existing annotations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Filter annotations&lt;/strong&gt;: Use the sidebar to filter and search annotations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Toggle sidebar&lt;/strong&gt;: Click &amp;ldquo;Annotations&amp;rdquo; button to toggle sidebar&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;em&gt;The annotations can be accessed by anyone with the link to this document.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Upper Conference</title>
+      <link>https://cablemonkey.example.com/floorplans/upper-conf/</link>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://cablemonkey.example.com/floorplans/upper-conf/</guid>
+      <description>&lt;h3 id=&#34;the-pdf-viewer-above-allows-you-to&#34;&gt;The PDF viewer above allows you to:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Navigate between pages using the Previous/Next buttons&lt;/li&gt;&#xA;&lt;li&gt;Zoom in and out using the +/- buttons&lt;/li&gt;&#xA;&lt;li&gt;Enter a specific page number directly&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Add annotations using Hypothesis&lt;/strong&gt; - click anywhere on the PDF to add&#xA;comments, highlight text, or make notes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;heres-how-to-use-it&#34;&gt;Here&amp;rsquo;s how to use it:&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Add annotations&lt;/strong&gt;: Click anywhere on the document to add a comment&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reply to annotations&lt;/strong&gt;: Respond to existing annotations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Filter annotations&lt;/strong&gt;: Use the sidebar to filter and search annotations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Toggle sidebar&lt;/strong&gt;: Click &amp;ldquo;Annotations&amp;rdquo; button to toggle sidebar&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;em&gt;The annotations can be accessed by anyone with the link to this document.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

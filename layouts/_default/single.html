@@ -18,7 +18,7 @@
 <!-- Annotation prompt -->
 <div class="annotation-prompt">
   <strong>💡 Click anywhere on the floor plan to add an annotation!</strong> 
-  Annotations are shared across all users.
+  Leave text empty to add a pin instead. Annotations and pins are shared across all users.
 </div>
 
 <!-- PDF Viewer with Annotations -->
@@ -40,6 +40,7 @@
     <div style="position: relative; display: inline-block; margin: 0 auto;">
       <canvas id="pdf-canvas"></canvas>
       <div id="markers-container"></div>
+      <div id="pins-container"></div>
     </div>
   </div>
   
@@ -72,8 +73,8 @@
 <!-- Annotation Modal -->
 <div class="annotation-modal" id="annotation-modal">
   <div class="annotation-modal-content">
-    <h3>Add Annotation</h3>
-    <textarea id="annotation-text" placeholder="Enter your annotation..."></textarea>
+    <h3>Add Annotation or Pin</h3>
+    <textarea id="annotation-text" placeholder="Enter your annotation... (leave empty for pin)"></textarea>
     <div class="annotation-modal-buttons">
       <button class="cancel-btn" id="cancel-annotation">Cancel</button>
       <button class="save-btn" id="save-annotation">Save</button>
@@ -132,11 +133,13 @@
     let isAdmin = false;
     let pendingDeleteIdx = null;
     let sidebarVisible = true;
+    let droppedPins = [];
     
     // DOM elements
     const canvas = document.getElementById('pdf-canvas');
     const ctx = canvas.getContext('2d');
     const markersContainer = document.getElementById('markers-container');
+    const pinsContainer = document.getElementById('pins-container');
     const modal = document.getElementById('annotation-modal');
     const replyModal = document.getElementById('reply-modal');
     const textarea = document.getElementById('annotation-text');
@@ -298,6 +301,44 @@
         });
         
         markersContainer.appendChild(marker);
+      });
+    }
+    
+    // Get pins for current page
+    function getCurrentPagePins() {
+      return droppedPins.filter(p => p.page === pageNum);
+    }
+    
+    // Render dropped pins on canvas
+    function renderPins() {
+      pinsContainer.innerHTML = '';
+      const currentPins = getCurrentPagePins();
+      
+      currentPins.forEach((pin, idx) => {
+        const pinEl = document.createElement('div');
+        pinEl.className = 'dropped-pin' + (pin.toggled ? ' toggled' : '');
+        pinEl.style.left = (pin.x * scale) + 'px';
+        pinEl.style.top = (pin.y * scale) + 'px';
+        pinEl.dataset.index = idx;
+        
+        pinEl.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (!isAdmin) {
+            alert('Only admin can modify pins');
+            return;
+          }
+          const pinIndex = droppedPins.indexOf(pin);
+          if (pinIndex !== -1) {
+            if (droppedPins[pinIndex].toggled) {
+              droppedPins.splice(pinIndex, 1);
+            } else {
+              droppedPins[pinIndex].toggled = true;
+            }
+            renderPins();
+          }
+        });
+        
+        pinsContainer.appendChild(pinEl);
       });
     }
     
@@ -467,7 +508,16 @@
     // Save new annotation
     function saveNewAnnotation() {
       const text = textarea.value.trim();
+      
+      // If no text, create a pin instead of annotation
       if (!text) {
+        droppedPins.push({
+          page: pageNum,
+          x: pendingAnnotation.x,
+          y: pendingAnnotation.y,
+          toggled: false
+        });
+        renderPins();
         modal.classList.remove('visible');
         return;
       }
@@ -572,11 +622,14 @@
         
         markersContainer.style.width = canvas.width + 'px';
         markersContainer.style.height = canvas.height + 'px';
+        pinsContainer.style.width = canvas.width + 'px';
+        pinsContainer.style.height = canvas.height + 'px';
         
         return page.render(renderContext).promise.then(function() {
           document.getElementById('page-num').value = num;
           document.getElementById('page-num').max = pdfDoc.numPages;
           renderMarkers();
+          renderPins();
         });
       });
     }
@@ -616,7 +669,7 @@
       renderPage(pageNum);
     });
     
-    // Click on canvas to add annotation
+    // Click on canvas to add annotation or pin
     canvas.addEventListener('click', function(e) {
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -717,7 +770,6 @@
 <!-- Styles -->
 <style>
   .sidebar-toggle {
-    margin-left: auto;
     background: #3498db !important;
   }
   

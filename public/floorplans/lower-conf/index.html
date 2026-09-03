@@ -1,22 +1,1451 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Lower Conference | Cable Monkey Packet</title><meta name=description content="Technical floor plan for lower conference rooms."><meta name=apple-mobile-web-app-capable content="yes"><meta name=mobile-web-app-capable content="yes"><script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js></script><script>pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"</script><style>*{margin:0;padding:0;box-sizing:border-box}html,body{-webkit-overflow-scrolling:touch}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.6;color:#333;background:#f5f5f5}.site-header{background:#2c3e50;color:#fff;padding:.875rem 1rem;box-shadow:0 2px 4px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}.site-header h1{font-size:1.25rem;font-weight:600}.site-header a{color:#fff;text-decoration:none;display:flex;align-items:center;gap:.5rem}.site-header .back-link{font-size:.9rem;opacity:.9}.container{max-width:1400px;margin:0 auto;padding:1rem}.page-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid #e0e0e0}.page-header h1{font-size:1.5rem;color:#2c3e50;margin-bottom:.25rem;line-height:1.3}.page-header .meta{color:#666;font-size:.85rem}.page-header .description{margin-top:.5rem;color:#555}.floorplan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}.floorplan-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:transform .2s,box-shadow .2s}.floorplan-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.15)}.floorplan-card:active{transform:scale(.98)}.floorplan-card a{text-decoration:none;color:inherit;display:block}.floorplan-card .card-content{padding:1rem}.floorplan-card h3{font-size:1rem;margin-bottom:.375rem;color:#2c3e50}.floorplan-card p{font-size:.85rem;color:#666;margin-bottom:.5rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.floorplan-card .category{display:inline-block;background:#3498db;color:#fff;padding:.2rem .6rem;border-radius:4px;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px}.viewer-wrapper{display:flex;gap:1rem;align-items:flex-start}.pdf-viewer-container{flex:1;background:#525659;padding:.5rem;border-radius:8px;margin-bottom:1rem;overflow-x:auto;-webkit-overflow-scrolling:touch;position:relative;min-width:0}.pdf-controls{background:#323639;padding:.625rem .75rem;border-radius:6px 6px 0 0;display:flex;align-items:center;gap:.5rem;color:#fff;flex-wrap:wrap;justify-content:center}.pdf-controls button{background:#5a5a5a;border:none;color:#fff;padding:.625rem 1rem;border-radius:6px;cursor:pointer;font-size:.9rem;min-width:44px;min-height:44px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}.pdf-controls button:hover{background:#6a6a6a}.pdf-controls button:active{background:#4a4a4a;transform:scale(.95)}.pdf-controls input[type=number]{width:50px;padding:.5rem .25rem;border:none;border-radius:4px;text-align:center;font-size:.9rem;min-height:44px}.pdf-controls .page-info{font-size:.85rem;white-space:nowrap}.pdf-controls .zoom-controls{display:flex;gap:.25rem;margin-left:auto}#pdf-canvas{display:block;margin:0 auto;background:#fff;max-width:100%;height:auto!important}.pdf-viewer-container canvas{display:block;margin:0 auto;max-width:100%;height:auto!important}.annotation-marker{position:absolute;width:24px;height:24px;background:#e74c3c;border:2px solid #fff;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;box-shadow:0 2px 4px rgba(0,0,0,.3);transform:translate(-50%,-50%);z-index:10;transition:transform .2s}.annotation-marker:hover{transform:translate(-50%,-50%)scale(1.2)}.annotation-marker.active{background:#27ae60;transform:translate(-50%,-50%)scale(1.2)}.annotations-sidebar{width:300px;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;flex-shrink:0;display:none;max-height:70vh;overflow-y:auto}.annotations-sidebar.visible{display:block}.annotations-header{background:#2c3e50;color:#fff;padding:.75rem 1rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}.annotations-header .count{background:#e74c3c;padding:.125rem .5rem;border-radius:12px;font-size:.75rem}.annotation-item{padding:.75rem 1rem;border-bottom:1px solid #eee;cursor:pointer;transition:background .2s}.annotation-item:hover{background:#f8f9fa}.annotation-item.active{background:#e8f4fd;border-left:3px solid #3498db}.annotation-item .num{display:inline-block;width:20px;height:20px;background:#e74c3c;color:#fff;border-radius:50%;text-align:center;line-height:20px;font-size:.7rem;margin-right:.5rem}.annotation-item .page{font-size:.75rem;color:#888;margin-left:.5rem}.annotation-item .text{display:block;margin-top:.375rem;font-size:.85rem;color:#333;white-space:pre-wrap;word-break:break-word}.annotation-item .delete-btn{float:right;color:#999;cursor:pointer;padding:.25rem;font-size:.85rem}.annotation-item .delete-btn:hover{color:#e74c3c}.no-annotations{padding:2rem 1rem;text-align:center;color:#888}.no-annotations p{font-size:.9rem}.annotation-prompt{background:#e8f4fd;border:1px solid #3498db;border-radius:8px;padding:1rem;margin-bottom:1rem;font-size:.9rem}.annotation-prompt strong{color:#2c3e50}.annotation-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center;padding:1rem}.annotation-modal.visible{display:flex}.annotation-modal-content{background:#fff;border-radius:12px;padding:1.5rem;width:100%;max-width:400px;box-shadow:0 10px 40px rgba(0,0,0,.3)}.annotation-modal-content h3{margin-bottom:1rem;color:#2c3e50}.annotation-modal-content textarea{width:100%;min-height:100px;padding:.75rem;border:1px solid #ddd;border-radius:8px;font-family:inherit;font-size:.95rem;resize:vertical}.annotation-modal-content textarea:focus{outline:none;border-color:#3498db}.annotation-modal-buttons{display:flex;gap:.75rem;margin-top:1rem}.annotation-modal-buttons button{flex:1;padding:.75rem;border:none;border-radius:8px;font-size:.95rem;cursor:pointer;min-height:44px}.annotation-modal-buttons .save-btn{background:#27ae60;color:#fff}.annotation-modal-buttons .cancel-btn{background:#95a5a6;color:#fff}.content{background:#fff;padding:1.25rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1)}.content h2{color:#2c3e50;margin:1.25rem 0 .75rem;font-size:1.25rem}.content h3{color:#34495e;margin:1rem 0 .5rem;font-size:1.1rem}.content p{margin-bottom:.75rem;font-size:.95rem}.content ul,.content ol{margin-left:1.25rem;margin-bottom:.75rem}.content li{margin-bottom:.375rem}.site-footer{background:#2c3e50;color:#fff;text-align:center;padding:1.5rem 1rem;margin-top:2rem;font-size:.85rem}.site-footer a{color:#5dade2}@media(max-width:900px){.viewer-wrapper{flex-direction:column}.annotations-sidebar{width:100%;max-height:none}}@media(max-width:480px){.site-header{padding:.75rem}.site-header h1{font-size:1.1rem}.container{padding:.75rem}.page-header h1{font-size:1.25rem}.floorplan-grid{grid-template-columns:1fr;gap:.75rem}.pdf-controls{padding:.5rem;gap:.375rem}.pdf-controls button{padding:.5rem .75rem;font-size:.85rem}.content{padding:1rem}}@media(pointer:coarse){button,a,input{min-height:44px;min-width:44px}.pdf-controls button{min-width:48px}}</style></head><body><header class=site-header><a href=/><span style=font-size:1.5rem>🐵</span>
-Cable Monkey Packet</a></header><main class=container><div class=page-header><h1>Lower Conference</h1><p class=meta>Category: Commercial |
-Date: Mar 6, 2026</p><p class=description>Technical floor plan for lower conference rooms.</p></div><div class=annotation-prompt><strong>💡 Click anywhere on the floor plan to add an annotation!</strong>
-Annotations are shared across all users.</div><div class=viewer-wrapper><div class=pdf-viewer-container id=pdf-container><div class=pdf-controls><button id=prev-page aria-label="Previous page">←</button>
-<span class=page-info><input type=number id=page-num value=1 min=1 aria-label="Page number">
-<span>of <span id=page-count>-</span></span>
-</span><button id=next-page aria-label="Next page">→</button><div class=zoom-controls><button id=zoom-out aria-label="Zoom out">−</button>
-<button id=zoom-in aria-label="Zoom in">+</button></div><button id=toggle-sidebar aria-label="Toggle sidebar" class=sidebar-toggle>☰ Annotations</button></div><div style="position:relative;display:inline-block;margin:0 auto"><canvas id=pdf-canvas></canvas><div id=markers-container></div></div></div><div class=annotations-sidebar id=annotations-sidebar><div class=annotations-header><span>Annotations</span>
-<span class=count id=annotation-count>0</span></div><div style="padding:.75rem;border-bottom:1px solid #eee"><input type=text id=annotation-filter placeholder="🔍 Filter..." style="width:100%;padding:.5rem;border:1px solid #ddd;border-radius:4px;font-size:.85rem"></div><div id=admin-login-section style="padding:.5rem 1rem;background:#f8f9fa;border-bottom:1px solid #eee;display:none"><button id=admin-login-btn style=width:100%;padding:.5rem;background:#2c3e50;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:.85rem>🔐 Login as Admin</button></div><div id=annotations-list><div class=no-annotations><p>No annotations yet.<br>Click on the floor plan to add one!</p></div></div></div></div><div class=annotation-modal id=annotation-modal><div class=annotation-modal-content><h3>Add Annotation</h3><textarea id=annotation-text placeholder="Enter your annotation..."></textarea><div class=annotation-modal-buttons><button class=cancel-btn id=cancel-annotation>Cancel</button>
-<button class=save-btn id=save-annotation>Save</button></div></div></div><div class=annotation-modal id=reply-modal><div class=annotation-modal-content><h3>Add Reply</h3><textarea id=reply-text placeholder="Enter your reply..."></textarea><div class=annotation-modal-buttons><button class=cancel-btn id=cancel-reply>Cancel</button>
-<button class=save-btn id=save-reply>Reply</button></div></div></div><div class=annotation-modal id=admin-modal><div class=annotation-modal-content><h3>Admin Login</h3><p style=margin-bottom:1rem;font-size:.9rem;color:#666>Contact admin for password</p><input type=password id=admin-password placeholder="Enter password" style="width:100%;padding:.75rem;border:1px solid #ddd;border-radius:8px;font-size:.95rem;margin-bottom:1rem"><div class=annotation-modal-buttons><button class=cancel-btn id=cancel-admin>Cancel</button>
-<button class=save-btn id=login-admin>Login</button></div></div></div><script>(function(){const F="/pdfs/LOWER CONFERENCE.pdf",j="lower conf.md".replace(/\s+/g,"-").toLowerCase(),U="penguins",C=!0,D="floorplan_admin_session_"+j,J="/api/annotations/"+j;let c=null,t=1,i=1,e=[],n=[],r="",w=null,u=null,z=[],l=!1,m=null,x=!0;const s=document.getElementById("pdf-canvas"),q=s.getContext("2d"),_=document.getElementById("markers-container"),f=document.getElementById("annotation-modal"),h=document.getElementById("reply-modal"),y=document.getElementById("annotation-text"),b=document.getElementById("reply-text"),v=document.getElementById("annotations-sidebar"),d=document.getElementById("annotations-list"),k=document.getElementById("annotation-count"),A=document.getElementById("annotation-filter");function H(){x=!x,x?v.classList.add("visible"):v.classList.remove("visible")}function Q(){try{const e=sessionStorage.getItem(D);e&&e==="authenticated"&&(l=!0)}catch{l=!1}O(),a()}function O(){const e=document.getElementById("admin-login-section");if(!e)return;C&&!l?e.style.display="block":e.style.display="none"}function G(){document.getElementById("admin-modal").classList.add("visible"),document.getElementById("admin-password").value="",document.getElementById("admin-password").focus()}function Y(){const e=document.getElementById("admin-login-btn");e&&e.addEventListener("click",G),document.getElementById("toggle-sidebar").addEventListener("click",H)}function p(){r=A.value.toLowerCase().trim(),r?n=e.filter(e=>!!e.text.toLowerCase().includes(r)||!!(e.replies&&e.replies.some(e=>e.text.toLowerCase().includes(r)))):n=e,a()}function W(){fetch("/api/annotations/"+j).then(e=>e.json()).then(t=>{e=t||[],e.forEach(e=>{e.replies||(e.replies=[])}),console.log("Loaded annotations:",e.length),n=e,a(),O()}).catch(t=>{console.error("Error loading annotations:",t),e=[],n=[],a()})}function B(e){return fetch("/api/annotations",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({docSlug:j,page:e.page,x:e.x,y:e.y,text:e.text})}).then(e=>e.json())}function I(e,t){return fetch("/api/annotations/"+e+"/reply",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:t})}).then(e=>e.json())}function K(e){return fetch("/api/annotations/"+e,{method:"DELETE"}).then(e=>e.json())}function ee(){return e.filter(e=>e.page===t)}function V(){return n.filter(e=>e.page===t)}function g(){_.innerHTML="",z=V(),z.forEach((e,t)=>{const n=document.createElement("div");n.className="annotation-marker",n.textContent=t+1,n.style.left=e.x*i+"px",n.style.top=e.y*i+"px",n.dataset.index=t,n.addEventListener("click",function(e){e.stopPropagation(),L(t)}),_.appendChild(n)})}function a(){if(r?k.textContent=n.length+" / "+e.length:k.textContent=e.length,n.length===0){e.length===0?d.innerHTML='<div class="no-annotations"><p>No annotations yet.<br>Click on the floor plan to add one!</p></div>':d.innerHTML='<div class="no-annotations"><p>No matching annotations.</p></div>',v.classList.remove("visible");return}v.classList.add("visible"),d.innerHTML=n.map((t,n)=>{const o=e.indexOf(t),i=!C||l?`<span class="delete-btn" data-idx="${o}">✕</span>`:"";let s=`
-          <div class="annotation-item" data-index="${o}" data-page="${t.page}">
-            <span class="num">${n+1}</span>
-            <span class="page">Page ${t.page}</span>
-            ${i}
-            <span class="text">${N(t.text)}</span>
-        `;return t.replies&&t.replies.length>0&&(s+='<div class="replies" style="margin-top: 0.5rem; padding-left: 1rem; border-left: 2px solid #eee;">',t.replies.forEach(e=>{s+=`<div class="reply-item" style="font-size: 0.85rem; margin-bottom: 0.375rem;">
-              <span style="color: #666;">${N(e.text)}</span>
-              <span style="font-size: 0.7rem; color: #999;">${$(e.created)}</span>
-            </div>`}),s+="</div>"),s+=`<button class="reply-btn" data-idx="${o}" data-id="${t.id}" style="margin-top: 0.5rem; padding: 0.25rem 0.5rem; background: #ecf0f1; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; color: #555;">💬 Reply</button>`,s+="</div>",s}).join(""),d.querySelectorAll(".annotation-item").forEach(s=>{s.addEventListener("click",function(s){if(s.target.classList.contains("delete-btn")||s.target.classList.contains("reply-btn"))return;const a=parseInt(this.dataset.index),i=parseInt(this.dataset.page);i!==t&&(t=i,o(t).then(g));const r=n.indexOf(e[a]);L(r)})}),d.querySelectorAll(".delete-btn").forEach(e=>{e.addEventListener("click",function(e){e.stopPropagation();const t=parseInt(this.dataset.idx);P(t)})}),d.querySelectorAll(".reply-btn").forEach(e=>{e.addEventListener("click",function(e){e.stopPropagation();const t=parseInt(this.dataset.idx);X(t)})})}function $(e){try{const t=new Date(e);return t.toLocaleDateString()}catch{return e}}function N(e){const t=document.createElement("div");return t.textContent=e,t.innerHTML}function L(t){document.querySelectorAll(".annotation-marker").forEach(e=>e.classList.remove("active"));const s=document.querySelector(`.annotation-marker[data-index="${t}"]`);s&&s.classList.add("active"),document.querySelectorAll(".annotation-item").forEach(e=>e.classList.remove("active"));const o=n[t];if(o){const n=e.indexOf(o),t=document.querySelector(`.annotation-item[data-index="${n}"]`);t&&(t.classList.add("active"),t.scrollIntoView({behavior:"smooth",block:"center"}))}}function P(e){if(!C||l){E(e);return}m=e,document.getElementById("admin-modal").classList.add("visible"),document.getElementById("admin-password").value="",document.getElementById("admin-password").focus()}function E(t){const s=e[t];if(!s||!s.id){console.error("No annotation ID found");return}confirm("Delete this annotation and all replies?")&&K(s.id).then(()=>{e.splice(t,1),n=e,r&&p(),g(),a()}).catch(e=>{console.error("Error deleting annotation:",e),alert("Failed to delete annotation")})}function R(e,t){w={x:e/i,y:t/i},y.value="",f.classList.add("visible"),y.focus()}function T(){const o=y.value.trim();if(!o){f.classList.remove("visible");return}const s={page:t,x:w.x,y:w.y,text:o,created:(new Date).toISOString(),replies:[]};B(s).then(t=>{s.id=t.id,e.unshift(s),n=e,r&&p(),g(),a()}).catch(e=>{console.error("Error saving annotation:",e),alert("Failed to save annotation")}),f.classList.remove("visible")}function X(e){u=e,b.value="",h.classList.add("visible"),b.focus()}function M(){const s=b.value.trim();if(!s||u===null){h.classList.remove("visible");return}const t=e[u];if(!t||!t.id){console.error("No annotation ID found"),h.classList.remove("visible");return}I(t.id,s).then(t=>{e[u].replies||(e[u].replies=[]),e[u].replies.push(t),n=e,r&&p(),a()}).catch(e=>{console.error("Error saving reply:",e),alert("Failed to save reply")}),h.classList.remove("visible")}function Z(){if(!F){document.getElementById("page-count").textContent="No PDF";return}pdfjsLib.getDocument(F).promise.then(function(e){c=e,document.getElementById("page-count").textContent=e.numPages,o(t),W(),Q()}).catch(function(e){console.error("Error loading PDF:",e),document.getElementById("page-count").textContent="Error"})}function o(e){return c.getPage(e).then(function(t){const n=t.getViewport({scale:i});s.height=n.height,s.width=n.width;const o={canvasContext:q,viewport:n};return _.style.width=s.width+"px",_.style.height=s.height+"px",t.render(o).promise.then(function(){document.getElementById("page-num").value=e,document.getElementById("page-num").max=c.numPages,g()})})}document.getElementById("prev-page").addEventListener("click",function(e){if(e.preventDefault(),t<=1)return;t--,o(t)}),document.getElementById("next-page").addEventListener("click",function(e){if(e.preventDefault(),!c||t>=c.numPages)return;t++,o(t)}),document.getElementById("page-num").addEventListener("change",function(){const e=parseInt(this.value);e>=1&&e<=c.numPages&&(t=e,o(t))}),document.getElementById("zoom-in").addEventListener("click",function(e){e.preventDefault(),i=Math.min(i+.3,3),o(t)}),document.getElementById("zoom-out").addEventListener("click",function(e){e.preventDefault(),i=Math.max(i-.3,.4),o(t)}),s.addEventListener("click",function(e){const t=s.getBoundingClientRect(),n=e.clientX-t.left,o=e.clientY-t.top;R(n,o)}),A.addEventListener("input",p),document.getElementById("cancel-annotation").addEventListener("click",function(){f.classList.remove("visible")}),document.getElementById("save-annotation").addEventListener("click",T),y.addEventListener("keydown",function(e){e.key==="Enter"&&e.ctrlKey&&T(),e.key==="Escape"&&f.classList.remove("visible")}),document.getElementById("cancel-reply").addEventListener("click",function(){h.classList.remove("visible")}),document.getElementById("save-reply").addEventListener("click",M),b.addEventListener("keydown",function(e){e.key==="Enter"&&e.ctrlKey&&M(),e.key==="Escape"&&h.classList.remove("visible")}),document.getElementById("admin-modal")&&(document.getElementById("cancel-admin").addEventListener("click",function(){document.getElementById("admin-modal").classList.remove("visible"),m=null}),document.getElementById("login-admin").addEventListener("click",function(){const e=document.getElementById("admin-password");if(e.value===U){try{sessionStorage.setItem(D,"authenticated")}catch{}l=!0,document.getElementById("admin-modal").classList.remove("visible"),a(),O(),m!==null&&(E(m),m=null)}else alert("Incorrect password"),e.value="",e.focus()}),document.getElementById("admin-password").addEventListener("keydown",function(e){e.key==="Enter"&&document.getElementById("login-admin").click(),e.key==="Escape"&&(document.getElementById("admin-modal").classList.remove("visible"),m=null)}));let S=0;s.addEventListener("touchstart",function(e){S=e.touches[0].clientX},{passive:!0}),s.addEventListener("touchend",function(e){const s=e.changedTouches[0].clientX,n=S-s;(n<0?-n:n)>50&&(n>0&&t<c.numPages?(t++,o(t)):n<0&&t>1&&(t--,o(t)))},{passive:!0}),Z(),Y()})()</script><style>.sidebar-toggle{margin-left:auto;background:#3498db!important}.reply-btn:hover{background:#d5dbdb!important}#annotation-filter:focus{outline:none;border-color:#3498db}</style><div class=content><h3 id=the-pdf-viewer-above-allows-you-to>The PDF viewer above allows you to:</h3><ul><li>Navigate between pages using the Previous/Next buttons</li><li>Zoom in and out using the +/- buttons</li><li>Enter a specific page number directly</li><li><strong>Add annotations using Hypothesis</strong> - click anywhere on the PDF to add
-comments, highlight text, or make notes</li></ul><h3 id=heres-how-to-use-it>Here&rsquo;s how to use it:</h3><ol><li><strong>Add annotations</strong>: Click anywhere on the document to add a comment</li><li><strong>Reply to annotations</strong>: Respond to existing annotations</li><li><strong>Filter annotations</strong>: Use the sidebar to filter and search annotations</li><li><strong>Toggle sidebar</strong>: Click &ldquo;Annotations&rdquo; button to toggle sidebar</li></ol><p><em>The annotations can be accessed by anyone with the link to this document.</em></p></div></main><footer class=site-footer><p>Technical Floor Plans with Annotations</p><p>Click anywhere on a floor plan to add annotations - no login required!</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Lower Conference | Cable Monkey Packet</title>
+  
+  
+  <meta name="description" content="Technical floor plan for lower conference rooms.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  </script>
+  
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+    }
+    
+     
+    .site-header {
+      background: #2c3e50;
+      color: white;
+      padding: 0.875rem 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .site-header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .site-header a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .site-header .back-link {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+     
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    
+     
+    .page-header {
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .page-header h1 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+    
+    .page-header .meta {
+      color: #666;
+      font-size: 0.85rem;
+    }
+    
+    .page-header .description {
+      margin-top: 0.5rem;
+      color: #555;
+    }
+    
+     
+    .floorplan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    
+    .floorplan-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .floorplan-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    
+    .floorplan-card:active {
+      transform: scale(0.98);
+    }
+    
+    .floorplan-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .floorplan-card .card-content {
+      padding: 1rem;
+    }
+    
+    .floorplan-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.375rem;
+      color: #2c3e50;
+    }
+    
+    .floorplan-card p {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .floorplan-card .category {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+     
+    .viewer-wrapper {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    
+    .pdf-viewer-container {
+      flex: 1;
+      background: #525659;
+      padding: 0.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+      min-width: 0;
+    }
+    
+    .pdf-controls {
+      background: #323639;
+      padding: 0.625rem 0.75rem;
+      border-radius: 6px 6px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .pdf-controls button {
+      background: #5a5a5a;
+      border: none;
+      color: white;
+      padding: 0.625rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      min-width: 44px;
+      min-height: 44px;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .pdf-controls button:hover {
+      background: #6a6a6a;
+    }
+    
+    .pdf-controls button:active {
+      background: #4a4a4a;
+      transform: scale(0.95);
+    }
+    
+    .pdf-controls input[type="number"] {
+      width: 50px;
+      padding: 0.5rem 0.25rem;
+      border: none;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0.9rem;
+      min-height: 44px;
+    }
+    
+    .pdf-controls .page-info {
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    
+    .pdf-controls .zoom-controls {
+      display: flex;
+      gap: 0.25rem;
+      margin-left: auto;
+    }
+    
+    #pdf-canvas {
+      display: block;
+      margin: 0 auto;
+      background: white;
+      max-width: 100%;
+      height: auto !important;
+    }
+    
+    .pdf-viewer-container canvas {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto !important;
+    }
+    
+     
+    .annotation-marker {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #e74c3c;
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      transition: transform 0.2s;
+    }
+    
+    .annotation-marker:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    
+    .annotation-marker.active {
+      background: #27ae60;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    
+     
+    .dropped-pin {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #f1c40f;
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      transition: background 0.2s, transform 0.2s;
+    }
+    
+    .dropped-pin:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    
+    .dropped-pin.toggled {
+      background: #27ae60;
+    }
+    
+    #pins-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+    #pins-container .dropped-pin {
+      pointer-events: auto;
+    }
+    
+    #markers-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+    #markers-container .annotation-marker {
+      pointer-events: auto;
+    }
+    
+     
+    .annotations-sidebar {
+      width: 300px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      flex-shrink: 0;
+      display: none;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+    
+    .annotations-sidebar.visible {
+      display: block;
+    }
+    
+    .annotations-header {
+      background: #2c3e50;
+      color: white;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    
+    .annotations-header .count {
+      background: #e74c3c;
+      padding: 0.125rem 0.5rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+    }
+    
+    .annotation-item {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .annotation-item:hover {
+      background: #f8f9fa;
+    }
+    
+    .annotation-item.active {
+      background: #e8f4fd;
+      border-left: 3px solid #3498db;
+    }
+    
+    .annotation-item .num {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: #e74c3c;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-size: 0.7rem;
+      margin-right: 0.5rem;
+    }
+    
+    .annotation-item .page {
+      font-size: 0.75rem;
+      color: #888;
+      margin-left: 0.5rem;
+    }
+    
+    .annotation-item .text {
+      display: block;
+      margin-top: 0.375rem;
+      font-size: 0.85rem;
+      color: #333;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    
+    .annotation-item .delete-btn {
+      float: right;
+      color: #999;
+      cursor: pointer;
+      padding: 0.25rem;
+      font-size: 0.85rem;
+    }
+    
+    .annotation-item .delete-btn:hover {
+      color: #e74c3c;
+    }
+    
+     
+    .no-annotations {
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #888;
+    }
+    
+    .no-annotations p {
+      font-size: 0.9rem;
+    }
+    
+     
+    .annotation-prompt {
+      background: #e8f4fd;
+      border: 1px solid #3498db;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .annotation-prompt strong {
+      color: #2c3e50;
+    }
+    
+     
+    .annotation-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    
+    .annotation-modal.visible {
+      display: flex;
+    }
+    
+    .annotation-modal-content {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    
+    .annotation-modal-content h3 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    
+    .annotation-modal-content textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      resize: vertical;
+    }
+    
+    .annotation-modal-content textarea:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+    
+    .annotation-modal-buttons {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    
+    .annotation-modal-buttons button {
+      flex: 1;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      min-height: 44px;
+    }
+    
+    .annotation-modal-buttons .save-btn {
+      background: #27ae60;
+      color: white;
+    }
+    
+    .annotation-modal-buttons .cancel-btn {
+      background: #95a5a6;
+      color: white;
+    }
+    
+     
+    .content {
+      background: white;
+      padding: 1.25rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .content h2 {
+      color: #2c3e50;
+      margin: 1.25rem 0 0.75rem;
+      font-size: 1.25rem;
+    }
+    
+    .content h3 {
+      color: #34495e;
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .content p {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+    
+    .content ul, .content ol {
+      margin-left: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .content li {
+      margin-bottom: 0.375rem;
+    }
+    
+     
+    .site-footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+    }
+    
+    .site-footer a {
+      color: #5dade2;
+    }
+    
+     
+    @media (max-width: 900px) {
+      .viewer-wrapper {
+        flex-direction: column;
+      }
+      
+      .annotations-sidebar {
+        width: 100%;
+        max-height: none;
+      }
+    }
+    
+     
+    @media (max-width: 480px) {
+      .site-header {
+        padding: 0.75rem;
+      }
+      
+      .site-header h1 {
+        font-size: 1.1rem;
+      }
+      
+      .container {
+        padding: 0.75rem;
+      }
+      
+      .page-header h1 {
+        font-size: 1.25rem;
+      }
+      
+      .floorplan-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      
+      .pdf-controls {
+        padding: 0.5rem;
+        gap: 0.375rem;
+      }
+      
+      .pdf-controls button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+      }
+      
+      .content {
+        padding: 1rem;
+      }
+    }
+    
+     
+    @media (pointer: coarse) {
+      button, a, input {
+        min-height: 44px;
+        min-width: 44px;
+      }
+      
+      .pdf-controls button {
+        min-width: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/">
+      <span style="font-size: 1.5rem;">🐵</span>
+      Cable Monkey Packet
+    </a>
+  </header>
+  
+  <main class="container">
+    
+
+
+
+
+
+<div class="page-header">
+  <h1>Lower Conference</h1>
+  <p class="meta">
+    Category: Commercial | 
+    Date: Mar 6, 2026
+  </p>
+  
+  <p class="description">Technical floor plan for lower conference rooms.</p>
+  
+</div>
+
+
+<div class="annotation-prompt">
+  <strong>💡 Click anywhere on the floor plan to add an annotation!</strong> 
+  Leave text empty to add a pin instead. Annotations and pins are shared across all users.
+</div>
+
+
+<div class="viewer-wrapper">
+  <div class="pdf-viewer-container" id="pdf-container">
+    <div class="pdf-controls">
+      <button id="prev-page" aria-label="Previous page">←</button>
+      <span class="page-info">
+        <input type="number" id="page-num" value="1" min="1" aria-label="Page number">
+        <span>of <span id="page-count">-</span></span>
+      </span>
+      <button id="next-page" aria-label="Next page">→</button>
+      <div class="zoom-controls">
+        <button id="zoom-out" aria-label="Zoom out">−</button>
+        <button id="zoom-in" aria-label="Zoom in">+</button>
+      </div>
+      <button id="toggle-sidebar" aria-label="Toggle sidebar" class="sidebar-toggle">☰ Annotations</button>
+    </div>
+    <div style="position: relative; display: inline-block; margin: 0 auto;">
+      <canvas id="pdf-canvas"></canvas>
+      <div id="markers-container"></div>
+      <div id="pins-container"></div>
+    </div>
+  </div>
+  
+  
+  <div class="annotations-sidebar" id="annotations-sidebar">
+    <div class="annotations-header">
+      <span>Annotations</span>
+      <span class="count" id="annotation-count">0</span>
+    </div>
+    
+    
+    <div style="padding: 0.75rem; border-bottom: 1px solid #eee;">
+      <input type="text" id="annotation-filter" placeholder="🔍 Filter..." style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.85rem;">
+    </div>
+    
+    
+    <div id="admin-login-section" style="padding: 0.5rem 1rem; background: #f8f9fa; border-bottom: 1px solid #eee; display: none;">
+      <button id="admin-login-btn" style="width: 100%; padding: 0.5rem; background: #2c3e50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem;">🔐 Login as Admin</button>
+    </div>
+    
+    
+    <div id="annotations-list">
+      <div class="no-annotations">
+        <p>No annotations yet.<br>Click on the floor plan to add one!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="annotation-modal" id="annotation-modal">
+  <div class="annotation-modal-content">
+    <h3>Add Annotation or Pin</h3>
+    <textarea id="annotation-text" placeholder="Enter your annotation... (leave empty for pin)"></textarea>
+    <div class="annotation-modal-buttons">
+      <button class="cancel-btn" id="cancel-annotation">Cancel</button>
+      <button class="save-btn" id="save-annotation">Save</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="annotation-modal" id="reply-modal">
+  <div class="annotation-modal-content">
+    <h3>Add Reply</h3>
+    <textarea id="reply-text" placeholder="Enter your reply..."></textarea>
+    <div class="annotation-modal-buttons">
+      <button class="cancel-btn" id="cancel-reply">Cancel</button>
+      <button class="save-btn" id="save-reply">Reply</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="annotation-modal" id="admin-modal">
+  <div class="annotation-modal-content">
+    <h3>Admin Login</h3>
+    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;">Contact admin for password</p>
+    <input type="password" id="admin-password" placeholder="Enter password" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; margin-bottom: 1rem;">
+    <div class="annotation-modal-buttons">
+      <button class="cancel-btn" id="cancel-admin">Cancel</button>
+      <button class="save-btn" id="login-admin">Login</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  (function() {
+    
+    const PDF_PATH = '\/pdfs\/LOWER CONFERENCE.pdf';
+    const DOC_SLUG = 'lower conf.md'.replace(/\s+/g, '-').toLowerCase();
+    const ADMIN_PASSWORD = 'penguins';
+    const HAS_ADMIN = true;
+    const ADMIN_SESSION_KEY = 'floorplan_admin_session_' + DOC_SLUG;
+    const API_BASE = '/api/annotations/' + DOC_SLUG;
+    
+    
+    let pdfDoc = null;
+    let pageNum = 1;
+    let scale = 1.0;
+    let annotations = [];
+    let filteredAnnotations = [];
+    let filterText = '';
+    let pendingAnnotation = null;
+    let pendingReplyIdx = null;
+    let currentPageAnnotations = [];
+    let isAdmin = false;
+    let pendingDeleteIdx = null;
+    let sidebarVisible = true;
+    let droppedPins = [];
+    
+    
+    const canvas = document.getElementById('pdf-canvas');
+    const ctx = canvas.getContext('2d');
+    const markersContainer = document.getElementById('markers-container');
+    const pinsContainer = document.getElementById('pins-container');
+    const modal = document.getElementById('annotation-modal');
+    const replyModal = document.getElementById('reply-modal');
+    const textarea = document.getElementById('annotation-text');
+    const replyText = document.getElementById('reply-text');
+    const sidebar = document.getElementById('annotations-sidebar');
+    const listContainer = document.getElementById('annotations-list');
+    const countEl = document.getElementById('annotation-count');
+    const filterInput = document.getElementById('annotation-filter');
+    
+    
+    function toggleSidebar() {
+      sidebarVisible = !sidebarVisible;
+      if (sidebarVisible) {
+        sidebar.classList.add('visible');
+      } else {
+        sidebar.classList.remove('visible');
+      }
+    }
+    
+    
+    function checkAdminSession() {
+      try {
+        const session = sessionStorage.getItem(ADMIN_SESSION_KEY);
+        if (session && session === 'authenticated') {
+          isAdmin = true;
+        }
+      } catch(e) {
+        isAdmin = false;
+      }
+      updateAdminLoginButton();
+      updateAnnotationsList();
+    }
+    
+    
+    function updateAdminLoginButton() {
+      const adminSection = document.getElementById('admin-login-section');
+      if (!adminSection) return;
+      
+      if (HAS_ADMIN && !isAdmin) {
+        adminSection.style.display = 'block';
+      } else {
+        adminSection.style.display = 'none';
+      }
+    }
+    
+    
+    function showAdminLogin() {
+      document.getElementById('admin-modal').classList.add('visible');
+      document.getElementById('admin-password').value = '';
+      document.getElementById('admin-password').focus();
+    }
+    
+    
+    function initAdminLoginButton() {
+      const loginBtn = document.getElementById('admin-login-btn');
+      if (loginBtn) {
+        loginBtn.addEventListener('click', showAdminLogin);
+      }
+      
+      
+      document.getElementById('toggle-sidebar').addEventListener('click', toggleSidebar);
+    }
+    
+    
+    function applyFilter() {
+      filterText = filterInput.value.toLowerCase().trim();
+      
+      if (!filterText) {
+        filteredAnnotations = annotations;
+      } else {
+        filteredAnnotations = annotations.filter(ann => {
+          if (ann.text.toLowerCase().includes(filterText)) return true;
+          if (ann.replies && ann.replies.some(r => r.text.toLowerCase().includes(filterText))) return true;
+          return false;
+        });
+      }
+      updateAnnotationsList();
+    }
+    
+    
+    function loadAnnotations() {
+      fetch('/api/annotations/' + DOC_SLUG)
+        .then(res => res.json())
+        .then(data => {
+          annotations = data || [];
+          annotations.forEach(ann => {
+            if (!ann.replies) ann.replies = [];
+          });
+          console.log('Loaded annotations:', annotations.length);
+          filteredAnnotations = annotations;
+          updateAnnotationsList();
+          updateAdminLoginButton();
+        })
+        .catch(err => {
+          console.error('Error loading annotations:', err);
+          annotations = [];
+          filteredAnnotations = [];
+          updateAnnotationsList();
+        });
+    }
+    
+    
+    function saveAnnotationToApi(annotation) {
+      return fetch('/api/annotations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          docSlug: DOC_SLUG,
+          page: annotation.page,
+          x: annotation.x,
+          y: annotation.y,
+          text: annotation.text
+        })
+      }).then(res => res.json());
+    }
+    
+    
+    function saveReplyToApi(annotationId, text) {
+      return fetch('/api/annotations/' + annotationId + '/reply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text })
+      }).then(res => res.json());
+    }
+    
+    
+    function deleteAnnotationFromApi(annotationId) {
+      return fetch('/api/annotations/' + annotationId, {
+        method: 'DELETE'
+      }).then(res => res.json());
+    }
+    
+    
+    function getCurrentPageAnnotations() {
+      return annotations.filter(a => a.page === pageNum);
+    }
+    
+    
+    function getFilteredAnnotationsForPage() {
+      return filteredAnnotations.filter(a => a.page === pageNum);
+    }
+    
+    
+    function renderMarkers() {
+      markersContainer.innerHTML = '';
+      currentPageAnnotations = getFilteredAnnotationsForPage();
+      
+      currentPageAnnotations.forEach((ann, idx) => {
+        const marker = document.createElement('div');
+        marker.className = 'annotation-marker';
+        marker.textContent = idx + 1;
+        marker.style.left = (ann.x * scale) + 'px';
+        marker.style.top = (ann.y * scale) + 'px';
+        marker.dataset.index = idx;
+        
+        marker.addEventListener('click', function(e) {
+          e.stopPropagation();
+          showAnnotation(idx);
+        });
+        
+        markersContainer.appendChild(marker);
+      });
+    }
+    
+    
+    function getCurrentPagePins() {
+      return droppedPins.filter(p => p.page === pageNum);
+    }
+    
+    
+    function renderPins() {
+      pinsContainer.innerHTML = '';
+      const currentPins = getCurrentPagePins();
+      
+      currentPins.forEach((pin, idx) => {
+        const pinEl = document.createElement('div');
+        pinEl.className = 'dropped-pin' + (pin.toggled ? ' toggled' : '');
+        pinEl.style.left = (pin.x * scale) + 'px';
+        pinEl.style.top = (pin.y * scale) + 'px';
+        pinEl.dataset.index = idx;
+        
+        pinEl.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (!isAdmin) {
+            alert('Only admin can modify pins');
+            return;
+          }
+          const pinIndex = droppedPins.indexOf(pin);
+          if (pinIndex !== -1) {
+            if (droppedPins[pinIndex].toggled) {
+              droppedPins.splice(pinIndex, 1);
+            } else {
+              droppedPins[pinIndex].toggled = true;
+            }
+            renderPins();
+          }
+        });
+        
+        pinsContainer.appendChild(pinEl);
+      });
+    }
+    
+    
+    function updateAnnotationsList() {
+      if (filterText) {
+        countEl.textContent = filteredAnnotations.length + ' / ' + annotations.length;
+      } else {
+        countEl.textContent = annotations.length;
+      }
+      
+      if (filteredAnnotations.length === 0) {
+        if (annotations.length === 0) {
+          listContainer.innerHTML = '<div class="no-annotations"><p>No annotations yet.<br>Click on the floor plan to add one!</p></div>';
+        } else {
+          listContainer.innerHTML = '<div class="no-annotations"><p>No matching annotations.</p></div>';
+        }
+        sidebar.classList.remove('visible');
+        return;
+      }
+      
+      sidebar.classList.add('visible');
+      
+      listContainer.innerHTML = filteredAnnotations.map((ann, idx) => {
+        const originalIdx = annotations.indexOf(ann);
+        const deleteBtnHtml = (!HAS_ADMIN || isAdmin) ? `<span class="delete-btn" data-idx="${originalIdx}">✕</span>` : '';
+        
+        let html = `
+          <div class="annotation-item" data-index="${originalIdx}" data-page="${ann.page}">
+            <span class="num">${idx + 1}</span>
+            <span class="page">Page ${ann.page}</span>
+            ${deleteBtnHtml}
+            <span class="text">${escapeHtml(ann.text)}</span>
+        `;
+        
+        
+        if (ann.replies && ann.replies.length > 0) {
+          html += '<div class="replies" style="margin-top: 0.5rem; padding-left: 1rem; border-left: 2px solid #eee;">';
+          ann.replies.forEach(reply => {
+            html += `<div class="reply-item" style="font-size: 0.85rem; margin-bottom: 0.375rem;">
+              <span style="color: #666;">${escapeHtml(reply.text)}</span>
+              <span style="font-size: 0.7rem; color: #999;">${formatDate(reply.created)}</span>
+            </div>`;
+          });
+          html += '</div>';
+        }
+        
+        html += `<button class="reply-btn" data-idx="${originalIdx}" data-id="${ann.id}" style="margin-top: 0.5rem; padding: 0.25rem 0.5rem; background: #ecf0f1; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; color: #555;">💬 Reply</button>`;
+        html += '</div>';
+        return html;
+      }).join('');
+      
+      
+      listContainer.querySelectorAll('.annotation-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+          if (e.target.classList.contains('delete-btn') || e.target.classList.contains('reply-btn')) return;
+          const idx = parseInt(this.dataset.index);
+          const page = parseInt(this.dataset.page);
+          if (page !== pageNum) {
+            pageNum = page;
+            renderPage(pageNum).then(renderMarkers);
+          }
+          const filteredIdx = filteredAnnotations.indexOf(annotations[idx]);
+          showAnnotation(filteredIdx);
+        });
+      });
+      
+      
+      listContainer.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const idx = parseInt(this.dataset.idx);
+          requestDeleteAnnotation(idx);
+        });
+      });
+      
+      
+      listContainer.querySelectorAll('.reply-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const idx = parseInt(this.dataset.idx);
+          openReplyModal(idx);
+        });
+      });
+    }
+    
+    
+    function formatDate(dateStr) {
+      try {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString();
+      } catch(e) {
+        return dateStr;
+      }
+    }
+    
+    
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    
+    
+    function showAnnotation(idx) {
+      document.querySelectorAll('.annotation-marker').forEach(m => m.classList.remove('active'));
+      const marker = document.querySelector(`.annotation-marker[data-index="${idx}"]`);
+      if (marker) marker.classList.add('active');
+      
+      document.querySelectorAll('.annotation-item').forEach(item => item.classList.remove('active'));
+      const filteredAnn = filteredAnnotations[idx];
+      if (filteredAnn) {
+        const originalIdx = annotations.indexOf(filteredAnn);
+        const item = document.querySelector(`.annotation-item[data-index="${originalIdx}"]`);
+        if (item) {
+          item.classList.add('active');
+          item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+    
+    
+    function requestDeleteAnnotation(idx) {
+      if (!HAS_ADMIN || isAdmin) {
+        doDeleteAnnotation(idx);
+        return;
+      }
+      
+      pendingDeleteIdx = idx;
+      document.getElementById('admin-modal').classList.add('visible');
+      document.getElementById('admin-password').value = '';
+      document.getElementById('admin-password').focus();
+    }
+    
+    
+    function doDeleteAnnotation(idx) {
+      const ann = annotations[idx];
+      if (!ann || !ann.id) {
+        console.error('No annotation ID found');
+        return;
+      }
+      
+      if (confirm('Delete this annotation and all replies?')) {
+        deleteAnnotationFromApi(ann.id)
+          .then(() => {
+            annotations.splice(idx, 1);
+            filteredAnnotations = annotations;
+            if (filterText) applyFilter();
+            renderMarkers();
+            updateAnnotationsList();
+          })
+          .catch(err => {
+            console.error('Error deleting annotation:', err);
+            alert('Failed to delete annotation');
+          });
+      }
+    }
+    
+    
+    function openAnnotationModal(x, y) {
+      pendingAnnotation = { x: x / scale, y: y / scale };
+      textarea.value = '';
+      modal.classList.add('visible');
+      textarea.focus();
+    }
+    
+    
+    function saveNewAnnotation() {
+      const text = textarea.value.trim();
+      
+      
+      if (!text) {
+        droppedPins.push({
+          page: pageNum,
+          x: pendingAnnotation.x,
+          y: pendingAnnotation.y,
+          toggled: false
+        });
+        renderPins();
+        modal.classList.remove('visible');
+        return;
+      }
+      
+      const newAnnotation = {
+        page: pageNum,
+        x: pendingAnnotation.x,
+        y: pendingAnnotation.y,
+        text: text,
+        created: new Date().toISOString(),
+        replies: []
+      };
+      
+      saveAnnotationToApi(newAnnotation)
+        .then(saved => {
+          newAnnotation.id = saved.id;
+          annotations.unshift(newAnnotation);
+          filteredAnnotations = annotations;
+          if (filterText) applyFilter();
+          renderMarkers();
+          updateAnnotationsList();
+        })
+        .catch(err => {
+          console.error('Error saving annotation:', err);
+          alert('Failed to save annotation');
+        });
+      
+      modal.classList.remove('visible');
+    }
+    
+    
+    function openReplyModal(idx) {
+      pendingReplyIdx = idx;
+      replyText.value = '';
+      replyModal.classList.add('visible');
+      replyText.focus();
+    }
+    
+    
+    function saveReply() {
+      const text = replyText.value.trim();
+      if (!text || pendingReplyIdx === null) {
+        replyModal.classList.remove('visible');
+        return;
+      }
+      
+      const ann = annotations[pendingReplyIdx];
+      if (!ann || !ann.id) {
+        console.error('No annotation ID found');
+        replyModal.classList.remove('visible');
+        return;
+      }
+      
+      saveReplyToApi(ann.id, text)
+        .then(reply => {
+          if (!annotations[pendingReplyIdx].replies) {
+            annotations[pendingReplyIdx].replies = [];
+          }
+          annotations[pendingReplyIdx].replies.push(reply);
+          filteredAnnotations = annotations;
+          if (filterText) applyFilter();
+          updateAnnotationsList();
+        })
+        .catch(err => {
+          console.error('Error saving reply:', err);
+          alert('Failed to save reply');
+        });
+      
+      replyModal.classList.remove('visible');
+    }
+    
+    
+    function loadPDF() {
+      if (!PDF_PATH) {
+        document.getElementById('page-count').textContent = 'No PDF';
+        return;
+      }
+      
+      pdfjsLib.getDocument(PDF_PATH).promise.then(function(pdf) {
+        pdfDoc = pdf;
+        document.getElementById('page-count').textContent = pdf.numPages;
+        renderPage(pageNum);
+        loadAnnotations();
+        checkAdminSession();
+      }).catch(function(error) {
+        console.error('Error loading PDF:', error);
+        document.getElementById('page-count').textContent = 'Error';
+      });
+    }
+    
+    
+    function renderPage(num) {
+      return pdfDoc.getPage(num).then(function(page) {
+        const viewport = page.getViewport({ scale: scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        
+        markersContainer.style.width = canvas.width + 'px';
+        markersContainer.style.height = canvas.height + 'px';
+        pinsContainer.style.width = canvas.width + 'px';
+        pinsContainer.style.height = canvas.height + 'px';
+        
+        return page.render(renderContext).promise.then(function() {
+          document.getElementById('page-num').value = num;
+          document.getElementById('page-num').max = pdfDoc.numPages;
+          renderMarkers();
+          renderPins();
+        });
+      });
+    }
+    
+    
+    document.getElementById('prev-page').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (pageNum <= 1) return;
+      pageNum--;
+      renderPage(pageNum);
+    });
+    
+    document.getElementById('next-page').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!pdfDoc || pageNum >= pdfDoc.numPages) return;
+      pageNum++;
+      renderPage(pageNum);
+    });
+    
+    document.getElementById('page-num').addEventListener('change', function() {
+      const num = parseInt(this.value);
+      if (num >= 1 && num <= pdfDoc.numPages) {
+        pageNum = num;
+        renderPage(pageNum);
+      }
+    });
+    
+    document.getElementById('zoom-in').addEventListener('click', function(e) {
+      e.preventDefault();
+      scale = Math.min(scale + 0.3, 3);
+      renderPage(pageNum);
+    });
+    
+    document.getElementById('zoom-out').addEventListener('click', function(e) {
+      e.preventDefault();
+      scale = Math.max(scale - 0.3, 0.4);
+      renderPage(pageNum);
+    });
+    
+    
+    canvas.addEventListener('click', function(e) {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      openAnnotationModal(x, y);
+    });
+    
+    
+    filterInput.addEventListener('input', applyFilter);
+    
+    
+    document.getElementById('cancel-annotation').addEventListener('click', function() {
+      modal.classList.remove('visible');
+    });
+    
+    document.getElementById('save-annotation').addEventListener('click', saveNewAnnotation);
+    
+    textarea.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && e.ctrlKey) saveNewAnnotation();
+      if (e.key === 'Escape') modal.classList.remove('visible');
+    });
+    
+    
+    document.getElementById('cancel-reply').addEventListener('click', function() {
+      replyModal.classList.remove('visible');
+    });
+    
+    document.getElementById('save-reply').addEventListener('click', saveReply);
+    
+    replyText.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && e.ctrlKey) saveReply();
+      if (e.key === 'Escape') replyModal.classList.remove('visible');
+    });
+    
+    
+    if (document.getElementById('admin-modal')) {
+      document.getElementById('cancel-admin').addEventListener('click', function() {
+        document.getElementById('admin-modal').classList.remove('visible');
+        pendingDeleteIdx = null;
+      });
+      
+      document.getElementById('login-admin').addEventListener('click', function() {
+        const passwordInput = document.getElementById('admin-password');
+        if (passwordInput.value === ADMIN_PASSWORD) {
+          try { sessionStorage.setItem(ADMIN_SESSION_KEY, 'authenticated'); } catch(e) {}
+          isAdmin = true;
+          document.getElementById('admin-modal').classList.remove('visible');
+          updateAnnotationsList();
+          updateAdminLoginButton();
+          
+          if (pendingDeleteIdx !== null) {
+            doDeleteAnnotation(pendingDeleteIdx);
+            pendingDeleteIdx = null;
+          }
+        } else {
+          alert('Incorrect password');
+          passwordInput.value = '';
+          passwordInput.focus();
+        }
+      });
+      
+      document.getElementById('admin-password').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') document.getElementById('login-admin').click();
+        if (e.key === 'Escape') {
+          document.getElementById('admin-modal').classList.remove('visible');
+          pendingDeleteIdx = null;
+        }
+      });
+    }
+    
+    
+    let touchStartX = 0;
+    canvas.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    
+    canvas.addEventListener('touchend', function(e) {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0 && pageNum < pdfDoc.numPages) {
+          pageNum++;
+          renderPage(pageNum);
+        } else if (diff < 0 && pageNum > 1) {
+          pageNum--;
+          renderPage(pageNum);
+        }
+      }
+    }, { passive: true });
+    
+    
+    loadPDF();
+    initAdminLoginButton();
+  })();
+</script>
+
+
+<style>
+  .sidebar-toggle {
+    background: #3498db !important;
+  }
+  
+  .reply-btn:hover {
+    background: #d5dbdb !important;
+  }
+  
+  #annotation-filter:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+</style>
+
+
+
+<div class="content">
+  <h3 id="the-pdf-viewer-above-allows-you-to">The PDF viewer above allows you to:</h3>
+<ul>
+<li>Navigate between pages using the Previous/Next buttons</li>
+<li>Zoom in and out using the +/- buttons</li>
+<li>Enter a specific page number directly</li>
+<li><strong>Add annotations using Hypothesis</strong> - click anywhere on the PDF to add
+comments, highlight text, or make notes</li>
+</ul>
+<h3 id="heres-how-to-use-it">Here&rsquo;s how to use it:</h3>
+<ol>
+<li><strong>Add annotations</strong>: Click anywhere on the document to add a comment</li>
+<li><strong>Reply to annotations</strong>: Respond to existing annotations</li>
+<li><strong>Filter annotations</strong>: Use the sidebar to filter and search annotations</li>
+<li><strong>Toggle sidebar</strong>: Click &ldquo;Annotations&rdquo; button to toggle sidebar</li>
+</ol>
+<p><em>The annotations can be accessed by anyone with the link to this document.</em></p>
+
+</div>
+
+
+  </main>
+  
+  <footer class="site-footer">
+    <p>Technical Floor Plans with Annotations</p>
+    <p>Click anywhere on a floor plan to add annotations - no login required!</p>
+  </footer>
+</body>
+</html>

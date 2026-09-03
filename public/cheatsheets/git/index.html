@@ -747,7 +747,7 @@
   (function() {
     
     const PDF_PATH = '';
-    const DOC_SLUG = '04-dos-donts-hardware-deployment.md'.replace(/\s+/g, '-').toLowerCase();
+    const DOC_SLUG = 'git.md'.replace(/\s+/g, '-').toLowerCase();
     const ADMIN_PASSWORD = 'penguins';
     const HAS_ADMIN = true;
     const ADMIN_SESSION_KEY = 'floorplan_admin_session_' + DOC_SLUG;
@@ -1419,170 +1419,316 @@
 
 
 <div class="content">
-  <h1 id="dos-and-donts-of-hardware-deployment">Do&rsquo;s and Don&rsquo;ts of Hardware Deployment</h1>
-<h2 id="loading-and-unloading-equipment">Loading and Unloading Equipment</h2>
-<h3 id="best-practices">Best Practices</h3>
-<ul>
-<li>Always lift with your legs, not your back</li>
-<li>Use two people for heavy equipment</li>
-<li>Secure all items before transport</li>
-<li>Keep pathways clear</li>
-</ul>
-<hr>
-<h2 id="gaffers-tape-vs-duct-tape">Gaffers Tape vs. Duct Tape</h2>
-<h3 id="gaffers-tape">Gaffers Tape</h3>
-<ul>
-<li><strong>Purpose</strong>: Securing cables to floors and surfaces</li>
-<li><strong>Key feature</strong>: Leaves NO sticky residue when removed</li>
-<li><strong>Use case</strong>: Floor cable runs, temporary installations</li>
-</ul>
-<h3 id="duct-tape">Duct Tape</h3>
-<ul>
-<li><strong>Purpose</strong>: General purpose sealing and repair</li>
-<li><strong>Key feature</strong>: Strong adhesive, leaves residue</li>
-<li><strong>Use case</strong>: DO NOT use for cable management on floors</li>
-</ul>
-<blockquote>
-<p><strong>IMPORTANT</strong>: Only use Gaffers tape on the conference floor. Duct tape leaves sticky residue that is difficult to clean up and can damage venue surfaces.</p>
-</blockquote>
-<hr>
-<h2 id="purpose-of-tape">Purpose of Tape</h2>
+  <h2 id="-the-git-essentials-cheatsheet">🛠️ The Git Essentials Cheatsheet</h2>
+<h3 id="1-navigation--state">1. Navigation &amp; State</h3>
 <table>
   <thead>
       <tr>
-          <th>Tape Type</th>
-          <th>Use Case</th>
-          <th>Residue</th>
+          <th>Command</th>
+          <th>What it does</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Gaffers Tape</td>
-          <td>Floor cables, temporary marking</td>
-          <td>No</td>
+          <td><code>git status</code></td>
+          <td>See what has changed and what is staged.</td>
       </tr>
       <tr>
-          <td>Duct Tape</td>
-          <td>Repairs, heavy duty (not floor)</td>
-          <td>Yes</td>
+          <td><code>git log --oneline --graph</code></td>
+          <td>View a compact, visual history of commits.</td>
       </tr>
       <tr>
-          <td>Electrical Tape</td>
-          <td>Wire insulation</td>
-          <td>No</td>
+          <td><code>git diff</code></td>
+          <td>See changes in your working directory (not yet staged).</td>
       </tr>
       <tr>
-          <td>Masking Tape</td>
-          <td>Temporary marking, painting</td>
-          <td>Minimal</td>
+          <td><code>git diff --staged</code></td>
+          <td>See changes that are ready to be committed.</td>
       </tr>
   </tbody>
 </table>
-<hr>
-<h2 id="clean-installation-and-removal-protocol">Clean Installation and Removal Protocol</h2>
-<h3 id="installation">Installation</h3>
-<ol>
-<li>Plan cable routes before running cables</li>
-<li>Use appropriate cable lengths (avoid excess slack)</li>
-<li>Secure cables with gaffers tape every 6-8 feet</li>
-<li>Label both ends of all cables</li>
-<li>Document all connections</li>
-</ol>
-<h3 id="removal">Removal</h3>
-<ol>
-<li>Remove all tape carefully</li>
-<li>Roll up cables properly (see wrapping guide)</li>
-<li>Check for damage and document</li>
-<li>Return cables to proper storage</li>
-<li>Clean up any residue left behind</li>
-</ol>
-<hr>
-<h2 id="difference-in-cables">Difference in Cables</h2>
-<h3 id="network-cables-ethernet">Network Cables (Ethernet)</h3>
-<ul>
-<li><strong>Cat5e</strong>: Up to 1 Gbps, 100m max</li>
-<li><strong>Cat6</strong>: Up to 10 Gbps (short distances), 100m max</li>
-<li><strong>Cat6a</strong>: Up to 10 Gbps, 100m max, thicker</li>
-</ul>
-<h3 id="power-cords">Power Cords</h3>
-<ul>
-<li>Check voltage requirements</li>
-<li>Use only provided power cables</li>
-<li>Don&rsquo;t daisy-chain power strips</li>
-</ul>
-<h3 id="fiber-optics">Fiber Optics</h3>
-<ul>
-<li>Handle with care - sensitive to bending</li>
-<li>Use proper connectors</li>
-<li>Never look directly into fiber ends</li>
-</ul>
-<hr>
-<h2 id="how-to-wrap-a-wire">How to Wrap a Wire</h2>
-<p><em>(VIDEOS AND PICTURES COMING SOON)</em></p>
-<h3 id="basic-loop-technique">Basic Loop Technique</h3>
-<ol>
-<li><strong>Start</strong> with the connector in your hand</li>
-<li><strong>Create</strong> loops of 4-6 inches in diameter</li>
-<li><strong>Maintain</strong> consistent loop size</li>
-<li><strong>Finish</strong> with connector at the end of the coil</li>
-<li><strong>Secure</strong> with velcro tie or loose twist tie</li>
-</ol>
-<h3 id="coiling-best-practices">Coiling Best Practices</h3>
-<ul>
-<li>Always coil in the same direction</li>
-<li>Never twist or kink the cable</li>
-<li>Keep loops loose - don&rsquo;t over-tighten</li>
-<li>Store with connectors protected</li>
-</ul>
-<hr>
-<h2 id="summary">Summary</h2>
+<h3 id="2-the-staging-area">2. The Staging Area</h3>
 <table>
   <thead>
       <tr>
-          <th>Do</th>
-          <th>Don&rsquo;t</th>
+          <th>Command</th>
+          <th>What it does</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Use Gaffers tape on floors</td>
-          <td>Use duct tape on floors</td>
+          <td><code>git add &lt;file&gt;</code></td>
+          <td>Stage a specific file.</td>
       </tr>
       <tr>
-          <td>Label both ends of cables</td>
-          <td>Leave cables unlabeled</td>
+          <td><code>git add -p</code></td>
+          <td><strong>Pro Tip:</strong> Interactively stage parts of a file (hunks).</td>
       </tr>
       <tr>
-          <td>Plan routes before running</td>
-          <td>Run cables randomly</td>
+          <td><code>git commit -m &quot;msg&quot;</code></td>
+          <td>Create a new commit with a message.</td>
       </tr>
       <tr>
-          <td>Lift with your legs</td>
-          <td>Lift with your back</td>
+          <td><code>git commit --amend</code></td>
+          <td>Add staged changes to the <em>last</em> commit (great for typos).</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="3-branching--merging">3. Branching &amp; Merging</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>What it does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git checkout -b &lt;name&gt;</code></td>
+          <td>Create and switch to a new branch.</td>
       </tr>
       <tr>
-          <td>Clean up after removal</td>
-          <td>Leave tape residue</td>
+          <td><code>git switch &lt;name&gt;</code></td>
+          <td>The modern way to switch branches.</td>
       </tr>
       <tr>
-          <td>Return equipment to storage</td>
-          <td>Leave equipment on floor</td>
+          <td><code>git merge &lt;branch&gt;</code></td>
+          <td>Merge another branch into your current one.</td>
       </tr>
       <tr>
-          <td>Document all connections</td>
-          <td>Forget where cables go</td>
+          <td><code>git branch -d &lt;name&gt;</code></td>
+          <td>Delete a local branch after merging.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="4-fixing-mistakes-the-panic-section">4. Fixing Mistakes (The &ldquo;Panic&rdquo; Section)</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>What it does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git checkout -- &lt;file&gt;</code></td>
+          <td>Discard changes in a file and revert to the last commit.</td>
+      </tr>
+      <tr>
+          <td><code>git reset HEAD~1</code></td>
+          <td>Undo the last commit but keep the changes in your files.</td>
+      </tr>
+      <tr>
+          <td><code>git stash</code></td>
+          <td>Temporarily &ldquo;hide&rdquo; changes to work on something else.</td>
+      </tr>
+      <tr>
+          <td><code>git stash pop</code></td>
+          <td>Bring your hidden changes back.</td>
       </tr>
   </tbody>
 </table>
 <hr>
-<h2 id="safety-first">Safety First</h2>
+<h2 id="-the-gh-pr-cheat-sheet">🚀 The <code>gh pr</code> Cheat Sheet</h2>
+<h3 id="creating--managing">Creating &amp; Managing</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Command</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Create a PR</strong></td>
+          <td><code>gh pr create</code> (Follows interactive prompts)</td>
+      </tr>
+      <tr>
+          <td><strong>Quick Create</strong></td>
+          <td><code>gh pr create --title &quot;Fix bug&quot; --body &quot;Issue #12&quot;</code></td>
+      </tr>
+      <tr>
+          <td><strong>List Open PRs</strong></td>
+          <td><code>gh pr list</code></td>
+      </tr>
+      <tr>
+          <td><strong>Check PR Status</strong></td>
+          <td><code>gh pr status</code></td>
+      </tr>
+      <tr>
+          <td><strong>View PR in Browser</strong></td>
+          <td><code>gh pr view --web</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="reviewing--testing">Reviewing &amp; Testing</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Command</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Checkout a PR</strong></td>
+          <td><code>gh pr checkout &lt;number&gt;</code></td>
+      </tr>
+      <tr>
+          <td><strong>View Diff</strong></td>
+          <td><code>gh pr diff</code></td>
+      </tr>
+      <tr>
+          <td><strong>Approve a PR</strong></td>
+          <td><code>gh pr review --approve</code></td>
+      </tr>
+      <tr>
+          <td><strong>Request Changes</strong></td>
+          <td><code>gh pr review --comment -b &quot;Check the logic on line 42&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="merging--cleaning-up">Merging &amp; Cleaning Up</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Command</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Merge PR</strong></td>
+          <td><code>gh pr merge</code> (Interactive: Choose Merge, Squash, or Rebase)</td>
+      </tr>
+      <tr>
+          <td><strong>Auto-Merge</strong></td>
+          <td><code>gh pr merge --auto --squash</code> (Merges once CI passes)</td>
+      </tr>
+      <tr>
+          <td><strong>Close PR</strong></td>
+          <td><code>gh pr close &lt;number&gt;</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="-pro-tips-for-your-workflow">💡 Pro-Tips for Your Workflow</h3>
 <ul>
-<li>Always be aware of your surroundings</li>
-<li>Watch for tripping hazards</li>
-<li>Use proper lifting techniques</li>
-<li>Report any injuries immediately</li>
-<li>Ask if you&rsquo;re unsure</li>
+<li><strong>The &ldquo;Draft&rdquo; Shortcut:</strong> If you aren&rsquo;t ready for a full review yet, use <code>gh pr create --draft</code>.</li>
+<li><strong>Chain Commands:</strong> You can create and immediately view it to double-check formatting:
+<code>gh pr create --title &quot;Update&quot; --body &quot;Docs&quot; &amp;&amp; gh pr view</code></li>
+<li><strong>Shell Aliases:</strong> If <code>gh pr create</code> feels too long, add this to your <code>.bashrc</code> or <code>.zshrc</code>:</li>
 </ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>alias gpc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gh pr create&#39;</span>
+</span></span><span style="display:flex;"><span>alias gps<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gh pr status&#39;</span>
+</span></span></code></pre></div><hr>
+<h2 id="-automating-pr-templates">🤖 Automating PR Templates</h2>
+<p>GitHub CLI automatically detects any pull request templates you have in your repository. To set this up so you never have to manually type a description again:</p>
+<ol>
+<li><strong>Create the template file:</strong> Place a file at <code>.github/PULL_REQUEST_TEMPLATE.md</code>.</li>
+<li><strong>Add your structure:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Summary
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What does this change?
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Why is it necessary?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Testing
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Ran local build
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Verified on NixOS VM
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Related Issues
+</span></span></span><span style="display:flex;"><span>Fixes #
+</span></span></code></pre></div><ol start="3">
+<li><strong>The &ldquo;Magic&rdquo; Command:</strong> When you run <code>gh pr create</code>, it will pre-fill the body with this markdown. If you want to skip the editor and just use the template as-is, use:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gh pr create --fill
+</span></span></code></pre></div><p><em>This uses your commit titles for the PR title and the template for the body.</em></p>
+<hr>
+<h2 id="-example-workflow-adding-a-dark-mode-feature">🛠️ Example Workflow: Adding a &ldquo;Dark Mode&rdquo; Feature</h2>
+<p>Here is a standard, efficient workflow for adding a feature to a website using the terminal.</p>
+<h3 id="1-sync-and-branch">1. Sync and Branch</h3>
+<p>Always start from a fresh state to avoid merge conflicts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
+</span></span><span style="display:flex;"><span>git pull origin main
+</span></span><span style="display:flex;"><span>git checkout -b feature/dark-mode
+</span></span></code></pre></div><h3 id="2-implementation">2. Implementation</h3>
+<p>Open your editor or file manager (like <strong>Yazi</strong>) to make your changes. For a website feature, this might involve updating a NixOS module or a CSS file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Example: editing a site config</span>
+</span></span><span style="display:flex;"><span>yazi site/config.nix 
+</span></span></code></pre></div><h3 id="3-verification">3. Verification</h3>
+<p>Before pushing, run your local build or tests. If you are using a declarative setup, this might look like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Verify the build locally</span>
+</span></span><span style="display:flex;"><span>nixos-rebuild build --flake .#my-website
+</span></span></code></pre></div><h3 id="4-commit-and-push">4. Commit and Push</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;feat: add high-contrast dark mode support&#34;</span>
+</span></span><span style="display:flex;"><span>git push -u origin feature/dark-mode
+</span></span></code></pre></div><h3 id="5-create-the-pr-via-gh">5. Create the PR via <code>gh</code></h3>
+<p>Instead of clicking around the GitHub UI, finalize it right here:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gh pr create --title <span style="color:#e6db74">&#34;feat: Dark Mode Support&#34;</span> --body <span style="color:#e6db74">&#34;Implements local-first theme persistence.&#34;</span> --assignee <span style="color:#e6db74">&#34;@me&#34;</span> --label <span style="color:#e6db74">&#34;enhancement&#34;</span>
+</span></span></code></pre></div><h3 id="6-review-and-merge">6. Review and Merge</h3>
+<p>Once the CI passes (you can check with <code>gh pr status</code>), merge it and clean up:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gh pr merge --squash --delete-branch
+</span></span></code></pre></div><h3 id="-pro-tip-the-one-liner-alias">💡 Pro Tip: The &ldquo;One-Liner&rdquo; Alias</h3>
+<p>If you find yourself doing this often, you can add an alias to your shell configuration to handle the push and PR creation in one go:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># In your home-manager or .zshrc config:</span>
+</span></span><span style="display:flex;"><span>alias gpp<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;git push -u origin $(git branch --show-current) &amp;&amp; gh pr create --fill&#39;</span>
+</span></span></code></pre></div><hr>
+<p>To set vim as your default editor for the GitHub CLI, you have three main ways to do it—ranging from a quick command to a permanent, declarative NixOS configuration.</p>
+<h2 id="1-the-quick-command">1. The Quick Command</h2>
+<p>Run this directly in your terminal to update the <code>gh</code> configuration file (usually located at <code>~/.config/gh/config.yml</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gh config set editor vim
+</span></span></code></pre></div><h2 id="2-the-declarative-way-home-manager">2. The Declarative Way (Home Manager)</h2>
+<p>Since you use <strong>NixOS</strong> and <strong>Home Manager</strong>, the most robust way to handle this is to define it in your <code>home.nix</code> or a dedicated <code>gh.nix</code> module. This ensures your editor preference persists across reinstalls.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#75715e"># In your home-manager configuration</span>
+</span></span><span style="display:flex;"><span>programs<span style="color:#f92672">.</span>gh <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  settings <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    editor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vim&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Optional: Use SSH for git protocols</span>
+</span></span><span style="display:flex;"><span>    git_protocol <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ssh&#34;</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="3-the-global-environment-variable">3. The Global Environment Variable</h2>
+<p>If you want <strong>all</strong> CLI tools (Git, <code>gh</code>, <code>kubectl</code>, etc.) to use Neovim, you can set the <code>EDITOR</code> environment variable. GitHub CLI will respect <code>GH_EDITOR</code> first, then <code>VISUAL</code>, then <code>EDITOR</code>.</p>
+<p><strong>In your shell config (<code>.zshrc</code>, <code>.bashrc</code>, or via Nix):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vim&#34;</span>
+</span></span></code></pre></div><p><strong>Or via Home Manager:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>home<span style="color:#f92672">.</span>sessionVariables <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  EDITOR <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vim&#34;</span>;
+</span></span><span style="display:flex;"><span>  VISUAL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vim&#34;</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="-how-it-looks-in-practice">🚀 How it looks in practice</h2>
+<p>Now, when you run <code>gh pr create</code> or <code>gh pr edit</code>, instead of a basic text prompt or falling back to Nano, Neovim will launch inside your <strong>Kitty</strong> terminal.</p>
+<ul>
+<li><strong>To Save and Exit:</strong> Press <code>Esc</code> then type <code>:wq</code> and hit <code>Enter</code>. The PR will be submitted immediately.</li>
+<li><strong>To Abort:</strong> Press <code>Esc</code> then type <code>:cq</code> (exit with an error code). The GitHub CLI will see the non-zero exit and ask if you want to discard the PR.</li>
+</ul>
+<h3 id="-pro-tip-customizing-the-vim-ui-for-prs">💡 Pro Tip: Customizing the vim UI for PRs</h3>
+<p>If you want Neovim to open with specific settings just for GitHub (like enabling spellcheck or word wrap), you can pass flags in the config:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gh config set editor <span style="color:#e6db74">&#34;vim -c &#39;set spell wrap&#39;&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="-conventional-commits-automation">🚦 Conventional Commits Automation</h2>
+<p>To keep your history clean and readable (e.g., <code>feat:</code>, <code>fix:</code>, <code>docs:</code>), you can create a Git alias. This makes it easier to follow the standard without having to remember the exact syntax every time.</p>
+<h3 id="the-home-manager-setup">The Home Manager Setup</h3>
+<p>Add this to your <code>home.nix</code> to make it permanent across your NixOS systems:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>programs<span style="color:#f92672">.</span>git <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  aliases <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Usage: git feat &#34;add dark mode&#34;</span>
+</span></span><span style="display:flex;"><span>    feat <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;!f() { git commit -m </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">feat: $1</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">; }; f&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Usage: git fix &#34;broken navbar&#34;</span>
+</span></span><span style="display:flex;"><span>    fix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;!f() { git commit -m </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">fix: $1</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">; }; f&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Usage: git docs &#34;update readme&#34;</span>
+</span></span><span style="display:flex;"><span>    docs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;!f() { git commit -m </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">docs: $1</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">; }; f&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Usage: git refactor &#34;clean up api logic&#34;</span>
+</span></span><span style="display:flex;"><span>    refactor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;!f() { git commit -m </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">refactor: $1</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">; }; f&#34;</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="how-to-use-it">How to use it:</h3>
+<p>Instead of typing the long string, you just run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git feat <span style="color:#e6db74">&#34;implement local-first theme persistence&#34;</span>
+</span></span></code></pre></div><hr>
 
 </div>
 

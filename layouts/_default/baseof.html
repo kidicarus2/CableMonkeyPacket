@@ -276,6 +276,51 @@
       transform: translate(-50%, -50%) scale(1.2);
     }
     
+    /* Dropped pins on canvas */
+    .dropped-pin {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #f1c40f;
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      transition: background 0.2s, transform 0.2s;
+    }
+    
+    .dropped-pin:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    
+    .dropped-pin.toggled {
+      background: #27ae60;
+    }
+    
+    #pins-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+    #pins-container .dropped-pin {
+      pointer-events: auto;
+    }
+    
+    #markers-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+    #markers-container .annotation-marker {
+      pointer-events: auto;
+    }
+    
     /* Annotations sidebar */
     .annotations-sidebar {
       width: 300px;
